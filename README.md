@@ -12,8 +12,13 @@ Welcome to Hogwarts, the School of Whitchcraft and Wizardy. One of the tools tha
 
 - As a student stepping into the great hall at Hogwarts should be greeted with a message and I should be able to click a button that will initiate the sorting process.
 - I should then be asked a sequence of 6 questions that will determine to which of the 4 Hogwarts Houses I should belong.
-- When sorted, I should receive a message about which house I now belong in, that will inclue a history of the house and some unique facts about what type of people belong in the house.
+- When sorted, I should receive a message about which house I now belong in, that will include a history of the house and some unique facts about what type of people belong in the house.
+
+  - The message page should be decorated to follow the house colors and crest.
   - As a part of this message I should also be informed of any Famous Wizards that have come any gone through my house.
+
+- Use [this guide](http://harrypotter.wikia.com/wiki/Hogwarts_Houses) to help craft your questions about the characteristics of each house.
+- In the event of a tie, simply randomize and select a house from the two options.
 
 ### Stretch Problems
 
