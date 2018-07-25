@@ -6,7 +6,7 @@ Welcome to Hogwarts, the School of Whitchcraft and Wizardy. One of the tools tha
 
 - `cd` into `react-sorting-hat` directory and run `yarn install` to retrieve your dependancies.
 - run `yarn start` to spin up your `webpack development server`
-- create a directory called `components` and start to think about all of the components you'll need for this application.
+- Inside of `./react-sorting-hat/src` create a directory called `components` and start to think about all of the components you'll need for this application.
 
 ### Project description and requirements
 
@@ -21,4 +21,4 @@ Welcome to Hogwarts, the School of Whitchcraft and Wizardy. One of the tools tha
 - Look into [Firebase](https://firebase.google.com/) for data persistence.
   - Use Firebase to build out a Login System so that as a user I can login to the app and have all messages be directed at my name.
   - All data tracked through the app should be stored in firebase.
-- Allow me (the user) the ability to share my hogwarts house selection to my social media platform of choice.
+- Allow me (the user) the ability to share my hogwarts house decision to my social media platform of choice.
