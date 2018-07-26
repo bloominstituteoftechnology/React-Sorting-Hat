@@ -68,6 +68,9 @@ button:focus {
 
 .results {
     display: none;
+    flex-wrap: wrap;
+    border: 4px solid lightcoral;
+    border-radius: 8px;
 }
 
 .visible {
@@ -75,6 +78,29 @@ button:focus {
     justify-content: center;
 }
 
+.results .title {
+    width: 100%;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.results .title h1 {
+    width: 60%;
+}
+
+.results .title img {
+    width: 30%;
+}
+
+.results .content {
+    width: 80%
+}
+
 .hidden {
+    display: none;
+}
+
+.title .hidden {
     display: none;
 }
