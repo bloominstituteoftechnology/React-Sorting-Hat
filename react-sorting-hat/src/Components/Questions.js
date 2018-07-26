@@ -5,7 +5,7 @@ import Question from './Question';
 const Questions = (props) => {
     return (
         <div className="questionsContainer">
-            <Question currentQuestion={props.currentQuestion} nextQuestion={props.nextQuestion} currentAnswer={props.currentAnswer} />
+            <Question currentQuestion={props.currentQuestion} nextQuestion={props.nextQuestion} currentAnswer={props.currentAnswer} displayResult={props.displayResult} />
         </div>
     )
 }

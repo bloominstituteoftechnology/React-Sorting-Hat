@@ -8,9 +8,22 @@ let houses = [
     {name: 'Raven'}
 ]
 
-const Results = () => {
+const Results = (props) => {
+    let result = props.result;
+    let house = 0;
+    if (result < 10){
+        house = 0;
+    } else if (result < 15){
+        house = 1;
+    } else if (result < 20){
+        house = 2;
+    } else if (result <= 24){
+        house = 3;
+    }
     return(
-        <p>results here</p>
+        <div className={`results ${props.canShow ? 'show' : ''}`}>
+            <p>{houses[house].name}</p>
+        </div>
     )
 }
 

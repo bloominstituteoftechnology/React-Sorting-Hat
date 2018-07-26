@@ -19,6 +19,7 @@ const Question = (props) => {
             </div>
             <div>
                 <button onClick={props.nextQuestion} type="submit">Submit</button>
+                <button onClick={props.displayResult} type="button">Results</button>
             </div>
         </form>
     )
