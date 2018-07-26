@@ -6,7 +6,7 @@ const Title = (props) => {
     <div className="title">
         <h1> Welcome, {props.name} </h1>
         <h3> Which house will you belong to? </h3>
-        <button onClick={props.startQuiz} className={`${props.started ? 'hidden' : ''}`}> Sort </button>
+        <button onClick={props.startQuiz} className={`${props.started ? 'hidden' : ''}`}> Get Sorted! </button>
     </div>
     )
 }

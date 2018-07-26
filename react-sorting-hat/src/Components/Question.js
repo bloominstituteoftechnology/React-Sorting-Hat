@@ -21,7 +21,7 @@ const Question = (props) => {
             </div>
             <div className="buttons">
                 <button onClick={props.nextQuestion} type="submit" className={`${props.completed ? 'hidden' : ''}`}>Next</button>
-                <button onClick={props.displayResult} type="button" className={`${!props.completed ? 'hidden' : ''}`}>Results</button>
+                <button onClick={props.displayResult} type="button" className={`${!props.completed ? 'hidden' : ''} ${props.showResult ? 'hidden' : ''}`}>Results</button>
             </div>
         </form>
     )
