@@ -1,0 +1,68 @@
+.title {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.title h1{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+
+.title h3{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+
+.title button {
+    padding: 10px 30px;
+    font-size: 24px;
+}
+
+.questionsContainer {
+    display: none;
+}
+
+.questionsContainer .question {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.questionContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.questionContainer p{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.questionsContainer .buttons {
+    margin: 20px 0;
+}
+
+.questionsContainer button {
+    padding: 10px 20px;
+    margin: 10px 10px
+}
+
+.results {
+    display: none;
+}
+
+.visible {
+    display: flex;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}

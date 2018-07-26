@@ -21,7 +21,7 @@ const Results = (props) => {
         house = 3;
     }
     return(
-        <div className={`results ${props.canShow ? 'show' : ''}`}>
+        <div className={`results ${props.canShow ? 'visible' : ''}`}>
             <p>{houses[house].name}</p>
         </div>
     )

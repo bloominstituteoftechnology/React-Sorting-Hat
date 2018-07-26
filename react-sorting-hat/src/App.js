@@ -45,8 +45,8 @@ class App extends Component {
 	render() {
 		return (
 			<div className="container">
-				<Title name={this.state.name} startQuiz={this.startQuiz} />
-				<Questions currentQuestion = {this.state.currentQuestion} nextQuestion={this.nextQuestion} currentAnswer={this.currentAnswer} displayResult={this.displayResult} />
+				<Title name={this.state.name} startQuiz={this.startQuiz} started={this.state.started} />
+				<Questions started={this.state.started} currentQuestion = {this.state.currentQuestion} nextQuestion={this.nextQuestion} currentAnswer={this.currentAnswer} displayResult={this.displayResult} completed={this.state.completed} />
 				<Results canShow={this.state.showResult} result={this.state.result} />
 			</div>
 		);
