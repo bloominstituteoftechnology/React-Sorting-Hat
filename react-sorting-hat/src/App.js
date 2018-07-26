@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Question from "./components/Question";
+import Welcome from "./components/Welcome";
+import Result from "./components/Result";
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -8,6 +10,8 @@ class App extends Component {
 		super();
 
 		this.state = {
+			stage: 1,
+
 			questionArray: [
 				{
 					question: "question 1",
@@ -40,27 +44,20 @@ class App extends Component {
 					answer: true
 				}
 			],
-			houseArray: [
-				{
-					house: "Griffindor",
-					val: 15
-				},
-				{
-					house: "Slytherin",
-					val: 31
-				},
-				{
-					house: "Hufflepuff",
-					val: 47
-				},
-				{
-					house: "Ravenclaw",
-					val: 63
-				}
-			],
-			evaluation: null
+
+			house: ""
 		};
 	}
+
+	handleWelcome = () => {
+		this.setState({ stage: 2 });
+		console.log("hello");
+	};
+
+	handleReset = () => {
+		this.setState({ stage: 1 });
+		console.log("hello");
+	};
 
 	handleSubmit = event => {
 		event.preventDefault();
@@ -70,7 +67,19 @@ class App extends Component {
 		);
 		console.log(answerEval);
 
-		this.setState({ evaluation: answerEval });
+		switch (true) {
+			case answerEval <= 15:
+				this.setState({ house: "Griffindor", stage: 3 });
+				break;
+			case answerEval <= 31:
+				this.setState({ house: "Slytherin", stage: 3 });
+				break;
+			case answerEval <= 47:
+				this.setState({ house: "Hufflepuff", stage: 3 });
+				break;
+			default:
+				this.setState({ house: "Ravenclaw", stage: 3 });
+		}
 	};
 
 	handleAnswers = (ident, bool) => {
@@ -88,25 +97,35 @@ class App extends Component {
 		this.setState({ questionArray: idArray });
 	};
 
+	handleStage = () => {
+		switch (this.state.stage) {
+			case 1:
+				return <Welcome onWelcomeClick={this.handleWelcome} />;
+			case 2:
+				return (
+					<form>
+						{this.state.questionArray.map(e => {
+							return (
+								<Question
+									key={e.id}
+									onAnswerClick={this.handleAnswers}
+									questionObj={e}
+								/>
+							);
+						})}
+						<button onClick={this.handleSubmit}>
+							Submit Your Answers
+						</button>
+					</form>
+				);
+			case 3:
+				return (
+					<Result reset={this.handleReset} house={this.state.house} />
+				);
+		}
+	};
 	render() {
-		return (
-			<div className="AppWrapper">
-				<form>
-					{this.state.questionArray.map(e => {
-						return (
-							<Question
-								key={e.id}
-								onAnswerClick={this.handleAnswers}
-								questionObj={e}
-							/>
-						);
-					})}
-					<button onClick={this.handleSubmit}>
-						Submit Your Answers
-					</button>
-				</form>
-			</div>
-		);
+		return <div className="AppWrapper">{this.handleStage()}</div>;
 	}
 }
 
