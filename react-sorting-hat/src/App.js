@@ -4,6 +4,8 @@ import StartPage from './components/startpage';
 import QuestionPage from './components/questionpage';
 import AnswerPage from './components/answerpage';
 
+
+//test
 class App extends Component {
   constructor(props){
     super(props);
