@@ -38,7 +38,7 @@ const Results = (props) => {
     }
     return(
         <div className={`results ${props.canShow ? 'visible' : ''}`}>
-            <div className="title">
+            <div className="resultsTitle">
                 <h1>{houses[house].name}</h1>
                 <img src={`${houses[house].img}`} alt="icon of house" />
             </div>

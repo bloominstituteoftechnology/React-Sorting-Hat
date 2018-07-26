@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 
-let questionBank = ['How likely are you to give a homeless person money?', 'How likely are you to tell your friend the hard truth?', 'How likely are you to put others before yourself?', 'How likely are you to follow the rules?', 'How likely are you to use magic for the greater good?', 'How likely are you to kill a villain?'];
+let questionBank = ['How likely are you to help a muggle?', 'How likely are you to tell your friend the hard truth?', 'How likely are you to put others before yourself?', 'How likely are you to follow the rules?', 'How likely are you to use magic for the greater good?', 'How likely are you to kill a villain?'];
 
 const Question = (props) => {
     return (

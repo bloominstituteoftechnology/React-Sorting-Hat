@@ -2,8 +2,18 @@
   box-sizing: border-box;
 }
 
-html, body {
+html, body, #root{
   height: 100%;
+  color: white;
+}
+
+.background {
+  background-image: url('img/background.jpg');
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .8;
 }
 
 .container {
