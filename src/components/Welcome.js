@@ -12,7 +12,7 @@ let Welcome = props => {
 				alt=""
 			/>
 			<button className="Welcome__button" onClick={props.onWelcomeClick}>
-				Reach into The Sorting Hat
+				Put on the sorting hat to find your house!
 			</button>
 		</div>
 	);

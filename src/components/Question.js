@@ -33,7 +33,7 @@ class Question extends Component {
 						}
 						name={this.props.questionObj.id}
 						type="button"
-						value="True"
+						value={this.props.questionObj.option1}
 					/>
 
 					<input
@@ -46,7 +46,7 @@ class Question extends Component {
 						}
 						name={this.props.questionObj.id}
 						type="button"
-						value="False"
+						value={this.props.questionObj.option2}
 					/>
 				</div>
 			</div>

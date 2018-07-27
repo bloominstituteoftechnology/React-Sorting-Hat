@@ -17,17 +17,27 @@
 }
 
 .Welcome__button {
-	display: inline-block;
+	display: block;
 	padding: 1rem 3rem;
-	border: none;
-	background-color: hsl(56, 50%, 60%);
-	border-radius: 4px;
+	background-color: hsl(43, 100%, 60%);
 	color: #005874;
 	font-size: inherit;
 	font-family: inherit;
-	text-transform: uppercase;
+	border: none;
+	margin: 2rem auto;
+	border-radius: 4px;
+	/* width: 100px; */
+	text-align: center;
+	transform: skewX(-5deg);
+	transition: all 0.2s;
+	cursor: pointer;
+	box-shadow: 0 0.6rem 0 hsl(43, 100%, 30%);
 }
 
 .Welcome__button:hover {
-	box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
+	transform: translateY(-3px);
+}
+
+.Welcome__button:focus {
+	outline: none;
 }
