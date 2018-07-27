@@ -10,7 +10,7 @@ class Question extends Component {
 	}
 
 	componentDidUpdate() {
-		TweenMax.fromTo(this.DOMElement, 1, { opacity: 0 }, { opacity: 1 });
+		TweenMax.fromTo(this.DOMElement, 2, { opacity: 0 }, { opacity: 1 });
 	}
 
 	render() {
