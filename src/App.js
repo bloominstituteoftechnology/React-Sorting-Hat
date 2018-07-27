@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactHowler from "react-howler";
 import Question from "./components/Question";
 import Welcome from "./components/Welcome";
 import Result from "./components/Result";
@@ -181,10 +182,11 @@ class App extends Component {
 						Your browser does not support video
 					</video>
 				</div>
-				<audio autoPlay={true} loop={true}>
+				<ReactHowler src={sound} playing={true} loop={true} />
+				{/* <audio autoPlay={true} loop={true}>
 					<source src={sound} type="audio/mpeg" /> Your browser does
 					not support the audio element.
-				</audio>
+				</audio> */}
 				{this.handleStage()}
 			</div>
 		);
