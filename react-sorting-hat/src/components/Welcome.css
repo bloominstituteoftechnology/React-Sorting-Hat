@@ -13,13 +13,14 @@
 	margin: 0 auto 5rem;
 	max-width: 100%;
 	height: auto;
+	filter: brightness(0.7);
 }
 
 .Welcome__button {
 	display: inline-block;
 	padding: 1rem 3rem;
 	border: none;
-	background-color: #ffbe00;
+	background-color: hsl(56, 50%, 60%);
 	border-radius: 4px;
 	color: #005874;
 	font-size: inherit;

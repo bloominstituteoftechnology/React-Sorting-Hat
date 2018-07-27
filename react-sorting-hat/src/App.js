@@ -4,6 +4,7 @@ import Welcome from "./components/Welcome";
 import Result from "./components/Result";
 import logo from "./logo.svg";
 import sound from "./bgm.mp3";
+import video from "./video.mp4";
 import "./App.css";
 
 class App extends Component {
@@ -12,36 +13,39 @@ class App extends Component {
 
 		this.state = {
 			stage: 1,
-			questionStage: 1,
+			questionStage: 0,
 
 			questionArray: [
 				{
-					question: "Are you self-reliant?",
+					question:
+						"It is my ambition to say in ten sentences what others say in a whole book.",
 					id: 0,
 					answer: true
 				},
 				{
-					question: "Do you keep secrets?",
+					question:
+						"The mind is not a vessel to be filled, but a fire to be kindled.",
 					id: 1,
 					answer: true
 				},
 				{
-					question: "Do you think outside the box?",
+					question: "Genius is patience.",
 					id: 2,
 					answer: true
 				},
 				{
-					question: "Are you inquisitive?",
+					question: "It's opener, out there, in the wide, open air.",
 					id: 3,
 					answer: true
 				},
 				{
-					question: "Do you demand justice for the innocent?",
+					question: "Until death it is all life.",
 					id: 4,
 					answer: true
 				},
 				{
-					question: "Would you sacrifice your life for the weak?",
+					question:
+						"We must find our duty in what comes to us, not in what we imagine might have been.",
 					id: 5,
 					answer: true
 				}
@@ -52,19 +56,25 @@ class App extends Component {
 			houseData: [
 				{
 					name: "Gryffindor",
-					details: "Lorem Ipsum"
+					details:
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc semper pretium eleifend. Duis cursus nibh ac faucibus sagittis. Fusce at bibendum velit. Pellentesque ac finibus augue. Morbi cursus tristique nunc nec dignissim. Etiam pretium consequat venenatis."
+					// 		"You have a lion's heart but what is a lion without its pride?  You have the strength to protect the helpless. You have a duty to do so."
+					//
 				},
 				{
 					name: "Hufflepuff",
-					details: "Something else"
+					details:
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc semper pretium eleifend. Duis cursus nibh ac faucibus sagittis. Fusce at bibendum velit. Pellentesque ac finibus augue. Morbi cursus tristique nunc nec dignissim. Etiam pretium consequat venenatis. In feugiat finibus leo a consequat. Mauris facilisis at justo nec pellentesque. Mauris elementum laoreet mattis. Vestibulum hendrerit nec mauris vitae tempus."
 				},
 				{
 					name: "Ravenclaw",
-					details: "Yet another thing"
+					details:
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc semper pretium eleifend. Duis cursus nibh ac faucibus sagittis. Fusce at bibendum velit. Pellentesque ac finibus augue. Morbi cursus tristique nunc nec dignissim. Etiam pretium consequat venenatis. In feugiat finibus leo a consequat. Mauris facilisis at justo nec pellentesque. Mauris elementum laoreet mattis. Vestibulum hendrerit nec mauris vitae tempus. "
 				},
 				{
 					name: "Slytherin",
-					details: "And one last thing"
+					details:
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc semper pretium eleifend. Duis cursus nibh ac faucibus sagittis. Fusce at bibendum velit. Pellentesque ac finibus augue. Morbi cursus tristique nunc nec dignissim. Etiam pretium consequat venenatis. In feugiat finibus leo a consequat. Mauris facilisis at justo nec pellentesque. Mauris elementum laoreet mattis. Vestibulum hendrerit nec mauris vitae tempus."
 				}
 			]
 		};
@@ -165,6 +175,12 @@ class App extends Component {
 	render() {
 		return (
 			<div className="AppWrapper">
+				<div className="Question__video-wrapper">
+					<video className="Question__video" autoPlay muted loop>
+						<source src={video} type="video/mp4" />
+						Your browser does not support video
+					</video>
+				</div>
 				<audio autoPlay={true} loop={true}>
 					<source src={sound} type="audio/mpeg" /> Your browser does
 					not support the audio element.
