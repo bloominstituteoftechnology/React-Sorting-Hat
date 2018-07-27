@@ -58,24 +58,19 @@ class App extends Component {
 				{
 					name: "Gryffindor",
 					details:
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc semper pretium eleifend. Duis cursus nibh ac faucibus sagittis. Fusce at bibendum velit. Pellentesque ac finibus augue. Morbi cursus tristique nunc nec dignissim. Etiam pretium consequat venenatis."
-					// 		"You have a lion's heart but what is a lion without its pride?  You have the strength to protect the helpless. You have a duty to do so."
-					//
+						"You have a lion's heart, but what is a lion without its pride? You have the strength to protect the helpless.  And so have a duty to do so."
 				},
 				{
 					name: "Hufflepuff",
-					details:
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc semper pretium eleifend. Duis cursus nibh ac faucibus sagittis. Fusce at bibendum velit. Pellentesque ac finibus augue. Morbi cursus tristique nunc nec dignissim. Etiam pretium consequat venenatis. In feugiat finibus leo a consequat. Mauris facilisis at justo nec pellentesque. Mauris elementum laoreet mattis. Vestibulum hendrerit nec mauris vitae tempus."
+					details: "It's turtles, all the way down!"
 				},
 				{
 					name: "Ravenclaw",
-					details:
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc semper pretium eleifend. Duis cursus nibh ac faucibus sagittis. Fusce at bibendum velit. Pellentesque ac finibus augue. Morbi cursus tristique nunc nec dignissim. Etiam pretium consequat venenatis. In feugiat finibus leo a consequat. Mauris facilisis at justo nec pellentesque. Mauris elementum laoreet mattis. Vestibulum hendrerit nec mauris vitae tempus. "
+					details: ""
 				},
 				{
 					name: "Slytherin",
-					details:
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc semper pretium eleifend. Duis cursus nibh ac faucibus sagittis. Fusce at bibendum velit. Pellentesque ac finibus augue. Morbi cursus tristique nunc nec dignissim. Etiam pretium consequat venenatis. In feugiat finibus leo a consequat. Mauris facilisis at justo nec pellentesque. Mauris elementum laoreet mattis. Vestibulum hendrerit nec mauris vitae tempus."
+					details: "You'll do it yourself.  "
 				}
 			]
 		};
