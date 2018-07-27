@@ -1,0 +1,32 @@
+.Welcome {
+	text-align: center;
+}
+
+.Welcome__title {
+	font-size: 7.2rem;
+	margin-top: 3rem;
+	margin-bottom: 8rem;
+}
+
+.Welcome__image {
+	display: block;
+	margin: 0 auto 5rem;
+	max-width: 100%;
+	height: auto;
+}
+
+.Welcome__button {
+	display: inline-block;
+	padding: 1rem 3rem;
+	border: none;
+	background-color: #ffbe00;
+	border-radius: 4px;
+	color: #005874;
+	font-size: inherit;
+	font-family: inherit;
+	text-transform: uppercase;
+}
+
+.Welcome__button:hover {
+	box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
+}

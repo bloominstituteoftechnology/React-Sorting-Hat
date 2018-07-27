@@ -1,13 +1,21 @@
-import React from 'react';
+import React from "react";
+import "./Welcome.css";
 
 let Welcome = props => {
-    console.log(props);
-    return(
-        <div>
-            <h1>Welcome To Hogwarts</h1>
-            <button onClick={ props.onWelcomeClick }>Reach into The Sorting Hat</button>
-        </div>
-    );
+	console.log(props);
+	return (
+		<div className="Welcome">
+			<h1 className="Welcome__title">Welcome To Hogwarts</h1>
+			<img
+				className="Welcome__image"
+				src="https://www.hp-lexicon.org/wp-content/uploads/2016/09/the_sorting_hat_by_sahinduezguen-d47mwt5.png"
+				alt=""
+			/>
+			<button className="Welcome__button" onClick={props.onWelcomeClick}>
+				Reach into The Sorting Hat
+			</button>
+		</div>
+	);
 };
 
-export default Welcome
+export default Welcome;

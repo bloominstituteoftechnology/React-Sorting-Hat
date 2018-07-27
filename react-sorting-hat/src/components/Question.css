@@ -1,0 +1,41 @@
+.Question {
+	padding: 8rem 0;
+	text-align: center;
+	animation: fadeIn 1.5s ease-out;
+}
+
+.Question p {
+	font-size: 6rem;
+	margin-bottom: 4rem;
+}
+
+.Question__button {
+	display: inline-block;
+	padding: 1rem 0;
+	background-color: #ffbe00;
+	color: #005874;
+	font-size: inherit;
+	font-family: inherit;
+	border: none;
+	margin-right: 2rem;
+	border-radius: 4px;
+	width: 100px;
+	text-align: center;
+	transform: skewX(-5deg);
+	transition: all 0.2s;
+}
+
+.Question__button:hover {
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+	transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

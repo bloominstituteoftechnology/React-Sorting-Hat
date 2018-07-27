@@ -1,24 +1,30 @@
 import React from "react";
+import "./Question.css";
 
 let Question = props => {
 	return (
-		<div>
+		<div className="Question">
+		<img
+				className="Welcome__image"
+				src="https://www.hp-lexicon.org/wp-content/uploads/2016/09/the_sorting_hat_by_sahinduezguen-d47mwt5.png"
+				alt=""
+			/>
 			<p>{props.questionObj.question}</p>
 			<input
-				onChange={() => props.onAnswerClick(props.questionObj.id, true)}
-				checked={props.questionObj.answer}
+				className="Question__button"
+				onClick={() => props.onAnswerClick(props.questionObj.id, true)}
 				name={props.questionObj.id}
-				type="radio"
+				type="button"
+				value="Yes"
 			/>
-			<label>Yes </label>
 
 			<input
-				onChange={() => props.onAnswerClick(props.questionObj.id, false)}
-				checked={!props.questionObj.answer}
+				className="Question__button"
+				onClick={() => props.onAnswerClick(props.questionObj.id, false)}
 				name={props.questionObj.id}
-				type="radio"
+				type="button"
+				value="No"
 			/>
-			<label>No</label>
 		</div>
 	);
 };

@@ -3,6 +3,7 @@ import Question from "./components/Question";
 import Welcome from "./components/Welcome";
 import Result from "./components/Result";
 import logo from "./logo.svg";
+import sound from "./bgm.mp3";
 import "./App.css";
 
 class App extends Component {
@@ -10,36 +11,37 @@ class App extends Component {
 		super();
 
 		this.state = {
-			stage: 1,
+			stage: 2,
+			questionStage: 6,
 
 			questionArray: [
 				{
-					question: "question 1",
+					question: "Are you self-reliant?",
 					id: 0,
 					answer: true
 				},
 				{
-					question: "question 1",
+					question: "Do you keep secrets?",
 					id: 1,
 					answer: true
 				},
 				{
-					question: "question 1",
+					question: "Do you think outside the box?",
 					id: 2,
 					answer: true
 				},
 				{
-					question: "question 1",
+					question: "Are you inquisitive?",
 					id: 3,
 					answer: true
 				},
 				{
-					question: "question 1",
+					question: "Do you demand justice for the innocent?",
 					id: 4,
 					answer: true
 				},
 				{
-					question: "question 1",
+					question: "Would you sacrifice your life for the weak?",
 					id: 5,
 					answer: true
 				}
@@ -55,8 +57,7 @@ class App extends Component {
 	};
 
 	handleReset = () => {
-		this.setState({ stage: 1 });
-		console.log("hello");
+		this.setState({ stage: 1, questionStage: 0 });
 	};
 
 	handleSubmit = event => {
@@ -72,13 +73,13 @@ class App extends Component {
 				this.setState({ house: "Griffindor", stage: 3 });
 				break;
 			case answerEval <= 31:
-				this.setState({ house: "Slytherin", stage: 3 });
-				break;
-			case answerEval <= 47:
 				this.setState({ house: "Hufflepuff", stage: 3 });
 				break;
-			default:
+			case answerEval <= 47:
 				this.setState({ house: "Ravenclaw", stage: 3 });
+				break;
+			default:
+				this.setState({ house: "Slytherin", stage: 3 });
 		}
 	};
 
@@ -94,7 +95,10 @@ class App extends Component {
 			return e;
 		});
 
-		this.setState({ questionArray: idArray });
+		this.setState(prevState => ({
+			questionArray: idArray,
+			questionStage: prevState.questionStage + 1
+		}));
 	};
 
 	handleStage = () => {
@@ -104,18 +108,30 @@ class App extends Component {
 			case 2:
 				return (
 					<form>
-						{this.state.questionArray.map(e => {
-							return (
-								<Question
-									key={e.id}
-									onAnswerClick={this.handleAnswers}
-									questionObj={e}
+						{this.state.questionStage === 6 ? (
+							<div className="form__container">
+								<img
+									className="Welcome__image"
+									src="https://www.hp-lexicon.org/wp-content/uploads/2016/09/the_sorting_hat_by_sahinduezguen-d47mwt5.png"
+									alt=""
 								/>
-							);
-						})}
-						<button onClick={this.handleSubmit}>
-							Submit Your Answers
-						</button>
+								<button
+									className="Welcome__button form__button"
+									onClick={this.handleSubmit}
+								>
+									What is your house?
+								</button>
+							</div>
+						) : (
+							<Question
+								onAnswerClick={this.handleAnswers}
+								questionObj={
+									this.state.questionArray[
+										this.state.questionStage
+									]
+								}
+							/>
+						)}
 					</form>
 				);
 			case 3:
@@ -125,7 +141,15 @@ class App extends Component {
 		}
 	};
 	render() {
-		return <div className="AppWrapper">{this.handleStage()}</div>;
+		return (
+			<div className="AppWrapper">
+				<audio autoPlay={true} loop={true}>
+					<source src={sound} type="audio/mpeg" />> Your browser does
+					not support the audio element.
+				</audio>
+				{this.handleStage()}
+			</div>
+		);
 	}
 }
 
