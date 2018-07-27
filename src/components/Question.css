@@ -24,12 +24,12 @@
 	border: none;
 	margin: 2rem auto;
 	border-radius: 4px;
-	/* width: 100px; */
 	text-align: center;
 	transform: skewX(-5deg);
 	transition: all 0.2s;
 	cursor: pointer;
 	box-shadow: 0 0.6rem 0 hsl(43, 100%, 30%);
+	backface-visibility: hidden;
 }
 
 .Question__button:hover {

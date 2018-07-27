@@ -48,16 +48,16 @@ class App extends Component {
 					question: "It's opener, out there, in the wide, open air.",
 					id: 3,
 					answer: true,
-					option1:
-						"And it's turtles all the way down!  And I love Turtles!",
-					option2: "What?"
+					option1:"What?"
+						,
+					option2: "And it's turtles all the way down!  And I love Turtles!"
 				},
 				{
 					question: "Until death it is all life.",
 					id: 4,
 					answer: true,
-					option1: "I cherish every minute.",
-					option2: "Death and life are inseprable."
+					option1: "Death and life are inseprable.",
+					option2: "I cherish every minute.",
 				},
 				{
 					question:
@@ -65,9 +65,9 @@ class App extends Component {
 					id: 5,
 					answer: true,
 					option1:
-						"No sacrifice is too costly to defend the innocent.",
+					"No matter what you must find a way to defend yourself.",
 					option2:
-						"No matter what you must find a way to defend yourself."
+					"No sacrifice is too costly to defend the innocent.",
 				}
 			],
 			house: 0,
