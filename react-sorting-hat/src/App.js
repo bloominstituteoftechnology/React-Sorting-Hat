@@ -11,8 +11,8 @@ class App extends Component {
 		super();
 
 		this.state = {
-			stage: 2,
-			questionStage: 6,
+			stage: 1,
+			questionStage: 1,
 
 			questionArray: [
 				{
@@ -47,7 +47,26 @@ class App extends Component {
 				}
 			],
 
-			house: ""
+			house: 0,
+
+			houseData: [
+				{
+					name: "Gryffindor",
+					details: "Lorem Ipsum"
+				},
+				{
+					name: "Hufflepuff",
+					details: "Something else"
+				},
+				{
+					name: "Ravenclaw",
+					details: "Yet another thing"
+				},
+				{
+					name: "Slytherin",
+					details: "And one last thing"
+				}
+			]
 		};
 	}
 
@@ -70,16 +89,16 @@ class App extends Component {
 
 		switch (true) {
 			case answerEval <= 15:
-				this.setState({ house: "Griffindor", stage: 3 });
+				this.setState({ house: 0, stage: 3 });
 				break;
 			case answerEval <= 31:
-				this.setState({ house: "Hufflepuff", stage: 3 });
+				this.setState({ house: 1, stage: 3 });
 				break;
 			case answerEval <= 47:
-				this.setState({ house: "Ravenclaw", stage: 3 });
+				this.setState({ house: 2, stage: 3 });
 				break;
 			default:
-				this.setState({ house: "Slytherin", stage: 3 });
+				this.setState({ house: 3, stage: 3 });
 		}
 	};
 
@@ -136,7 +155,10 @@ class App extends Component {
 				);
 			case 3:
 				return (
-					<Result reset={this.handleReset} house={this.state.house} />
+					<Result
+						reset={this.handleReset}
+						house={this.state.houseData[this.state.house]}
+					/>
 				);
 		}
 	};
@@ -144,7 +166,7 @@ class App extends Component {
 		return (
 			<div className="AppWrapper">
 				<audio autoPlay={true} loop={true}>
-					<source src={sound} type="audio/mpeg" />> Your browser does
+					<source src={sound} type="audio/mpeg" /> Your browser does
 					not support the audio element.
 				</audio>
 				{this.handleStage()}

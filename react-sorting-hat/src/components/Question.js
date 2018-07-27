@@ -4,8 +4,8 @@ import "./Question.css";
 let Question = props => {
 	return (
 		<div className="Question">
-		<img
-				className="Welcome__image"
+			<img
+				className="Welcome__image img-small"
 				src="https://www.hp-lexicon.org/wp-content/uploads/2016/09/the_sorting_hat_by_sahinduezguen-d47mwt5.png"
 				alt=""
 			/>

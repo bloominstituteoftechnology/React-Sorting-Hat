@@ -1,0 +1,39 @@
+.Result {
+	text-align: center;
+	padding: 3rem 0;
+}
+
+.Result__img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	width: 100px;
+	height: auto;
+	margin-bottom: 5rem;
+}
+
+.Result__title {
+	font-size: 7.2rem;
+	margin-bottom: 5rem;
+}
+
+.Result__text {
+	margin-bottom: 5rem;
+}
+
+.Result__button {
+	display: inline-block;
+	padding: 1rem 2rem;
+	background-color: #ffbe00;
+	color: #005874;
+	font-size: inherit;
+	font-family: inherit;
+	border: none;
+	border-radius: 4px;
+	transition: all 0.2s;
+	cursor: pointer;
+}
+
+.Result__button:hover {
+	box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4);
+}
