@@ -6,12 +6,11 @@ const Results=props=>
     <p>{props.houseInfo[props.result].quote}</p>
     <p>{props.houseInfo[props.result].qualities}</p>
     <img src={props.houseInfo[props.result].image} alt='House crest'/>
-    <p className>Famous {props.houseInfo[props.result].house} wizards:
+    <p>Famous {props.houseInfo[props.result].house} wizards:</p>
     <ul>
         <li>{props.houseInfo[props.result].wizards[0]}</li>
         <li>{props.houseInfo[props.result].wizards[1]}</li>
         <li>{props.houseInfo[props.result].wizards[2]}</li>
     </ul>
-    </p>
 </div>
 export default Results;

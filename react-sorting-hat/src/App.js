@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import logo from './logo.svg';
 import HomePage from './components/homepage.js';
 import Quiz from './components/quiz.js';
 import Results from './components/Results.js';
@@ -112,7 +111,7 @@ class App extends Component {
     } else {
       chosenHouse=3;
     }
-    this.setState({chosenHouse:chosenHouse},console.log(chosenHouse));
+    this.setState({chosenHouse:chosenHouse});
   }
   render() {
     return (
