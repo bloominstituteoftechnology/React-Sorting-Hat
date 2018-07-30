@@ -22,6 +22,7 @@ const resultsArr=[
     'house': 'Hufflepuff',
     'image': 'https://images.pottermore.com/bxd3o8b291gf/2GyJvxXe40kkkG0suuqUkw/e1a64ec404cf5f19afe9053b9d375230/PM_House_Pages_400_x_400_px_FINAL_CREST3.png?w=550&h=550&fit=thumb&f=center&q=85',
     'quote': 'Hufflepuffs value hard work, dedication, patience, loyalty, and fair play.',
+    'qualities':'Students belonging to this house are known to be hard-working, friendly, loyal, honest and rather impartial.',
     'wizards': ['Helga Hufflepuff', 'Cedric Diggory', 'Pomona Sprout']
   },
   {
