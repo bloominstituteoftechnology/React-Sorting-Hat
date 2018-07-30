@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import HomePage from './homepage.js';
-import Quiz from './quiz.js';
-import Results from './Results.js';
+import HomePage from './components/homepage.js';
+import Quiz from './components/quiz.js';
+import Results from './components/Results.js';
 const resultsArr=[
   {
     'house': 'Gryffindor',
