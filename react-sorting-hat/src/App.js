@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
+import logo from './logo.svg';
 import HomePage from './components/homepage.js';
 import Quiz from './components/quiz.js';
 import Results from './components/Results.js';
@@ -76,7 +77,7 @@ const quizArr=[
   'answer4': 'Mind control: then everyone will do exactly what you say!'
 }
 ]
-class App extends React.Component {
+class App extends Component {
   constructor() {
     super();
     this.state={
