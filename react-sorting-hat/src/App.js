@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import firebase, { auth, provider } from './firebase.js';
 import Welcome from './components/Welcome'
+import Video from './Clouds.mp4'
 import Question from './components/Question'
 import QuestionList from './components/QuestionList'
 import Results from './components/Results'
 import Hat from './harry-potter.svg'
 import './App.css';
+
 
 class App extends Component {
   constructor() {
@@ -91,7 +94,12 @@ class App extends Component {
     const showResults = this.state.welcomed && this.state.chosenHouse;
     return (
       <div className="App">
-        <div className="background"></div>
+         <div className="background"> 
+          <video className="background-video" autoPlay loop>
+            <source src={Video} type="video/mp4" />
+            NO browser support for u bitch
+          </video>
+       </div> 
         <img className="header" src={Hat} />
         <div className="app-container">
         {!this.state.welcomed && 
