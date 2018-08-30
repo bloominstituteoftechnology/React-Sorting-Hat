@@ -1,0 +1,43 @@
+.Welcome {
+	text-align: center;
+}
+
+.Welcome__title {
+	font-size: 7.2rem;
+	margin-top: 2rem;
+	margin-bottom: 5rem;
+}
+
+.Welcome__image {
+	display: block;
+	margin: 0 auto 5rem;
+	max-width: 100%;
+	height: auto;
+	filter: brightness(0.7);
+}
+
+.Welcome__button {
+	display: block;
+	padding: 1rem 3rem;
+	background-color: hsl(43, 100%, 60%);
+	color: #005874;
+	font-size: inherit;
+	font-family: inherit;
+	border: none;
+	margin: 2rem auto;
+	border-radius: 4px;
+	/* width: 100px; */
+	text-align: center;
+	transform: skewX(-5deg);
+	transition: all 0.2s;
+	cursor: pointer;
+	box-shadow: 0 0.6rem 0 hsl(43, 100%, 30%);
+}
+
+.Welcome__button:hover {
+	transform: translateY(-3px);
+}
+
+.Welcome__button:focus {
+	outline: none;
+}

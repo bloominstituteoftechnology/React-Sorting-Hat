@@ -1,0 +1,33 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: "Roboto Slab", serif;
+	color: #e6e6d4;
+	background-image: linear-gradient(
+		to right,
+		hsl(193, 70%, 21%),
+		hsl(194, 100%, 7%)
+	);
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: "Cormorant Unicase", serif;
+}
+/* Color palette
+#005874
+#1c819e
+#e6e6d4
+#ffbe00
+*/

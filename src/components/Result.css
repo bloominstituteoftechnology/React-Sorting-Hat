@@ -1,0 +1,52 @@
+.Result {
+	text-align: center;
+	padding: 3rem 0;
+	opacity: 0.8;
+}
+
+.Result__img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	width: 300px;
+	height: auto;
+	margin-bottom: 5rem;
+}
+
+.Result__title {
+	font-size: 7.2rem;
+	margin-bottom: 5rem;
+}
+
+.Result__text {
+	max-width: 70rem;
+	margin: 0 auto;
+	margin-bottom: 5rem;
+	font-size: 3rem;
+}
+
+.Result__button {
+	display: block;
+	padding: 1rem 3rem;
+	background-color: hsl(43, 100%, 60%);
+	color: #005874;
+	font-size: inherit;
+	font-family: inherit;
+	border: none;
+	margin: 2rem auto;
+	border-radius: 4px;
+	/* width: 100px; */
+	text-align: center;
+	transform: skewX(-5deg);
+	transition: all 0.2s;
+	cursor: pointer;
+	box-shadow: 0 0.6rem 0 hsl(43, 100%, 30%);
+}
+
+.Result__button:hover {
+	transform: translateY(-3px);
+}
+
+.Result__button:focus {
+	outline: none;
+}
