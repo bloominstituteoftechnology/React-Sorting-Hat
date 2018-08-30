@@ -1,28 +1,146 @@
+@font-face {
+  font-family: hogwarts;
+  src: url(hogwarts.ttf);
+}
+/* @font-face { */
+  /* font-family: crimson-semi;
+  src: url(Crimson-Semibold.otf);
+} */
 .App {
+  width: 100%;
+  height: 100vh; 
+  display: flex;
+  font-family: 'Crimson Text', serif;
+  align-items: center;
+  flex-direction: column;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("hogwarts.png");
+  opacity: .9;
+  z-index: -1;
+}
+
+.app-container {
+  box-sizing: border-box;
+  background-color: white;
+  padding: 10px;
+  opacity: .6;
+  width: 50%;
   text-align: center;
+  padding: 40px; 
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.background-video {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  opacity: .6;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+
+
+.header {
+  width: 200px;
+  margin: 20px;
   color: white;
+  opacity: 1;
+  filter: drop-shadow(16px 16px 5px black) ;
 }
 
-.App-title {
-  font-size: 1.5em;
+.wrapper{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.App-intro {
-  font-size: large;
+.welcome__header {
+  font-family: hogwarts;
+  margin: 10px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.welcome__text {
+  margin: 20px;
+  font-size: 16px;
 }
+
+button {
+  font-family: "Roboto";
+  border-radius: 0;
+  background-color: transparent;
+  padding: 8px 24px;
+  border: 1px solid black;
+  font-size: 13px;
+  color: black;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  outline: none;
+  
+}
+
+h1 {
+  margin: 0;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  padding: 5% 0;
+}
+.button {
+  align-items: center;
+}
+
+.option-button { 
+  font-size: 16px;
+  text-transform: lowercase;
+  font-family: 'Crimson Text', serif;
+  padding: 10px 0;
+  position: relative;
+  border: none;
+  
+}
+
+.option-button:after {
+	content: '';
+  position: absolute;
+  left: 5%;
+  display: inline-block;
+  height: 1em;
+  width: 90%;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+
+.option-button:focus:after {
+  opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+.option-button:focus {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+
+.results__house {
+  font-family: hogwarts;
+  text-transform: uppercase;
+}
+
+
