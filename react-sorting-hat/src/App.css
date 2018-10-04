@@ -120,11 +120,12 @@ body{
   font-family: 'Fondamento', cursive;
   font-size: 4rem;
   color: #3d4e50;
+  height: 10vh;
+  margin-bottom: 50px; 
 }
 
 .question-container button {
   border-radius: 10px;
-  /* background: #ebd5b3; */
   background: transparent;
   color: #5e717c;
   padding: 1.5% 3%;
@@ -138,10 +139,15 @@ body{
 
 }
 
+.answers-container {
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+}
+
 .answers-container .answer-button {
     border-radius: 10px;
-    /* background: #5E787C;
-    color: #f2e3cc; */
+
     color: #5E787C;
     background: transparent;
     padding: 2%;
@@ -177,5 +183,5 @@ body{
 
 .sorted-house h1 {
   font-family: 'Tangerine', cursive;
-  font-size: 4rem; 
+  font-size: 4rem;
 }
