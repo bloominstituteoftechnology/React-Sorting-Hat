@@ -6,7 +6,7 @@ const Answer = props => {
     props.handleAnswerChange(props.value)
   }
   return(
-    <div className='button'>
+    <div className='answer-button-container'>
       <button
         className='answer-button'
         value={props.value}
@@ -17,4 +17,4 @@ const Answer = props => {
   )
 }
 
-export default Answer; 
+export default Answer;

@@ -21,18 +21,22 @@ class Question extends React.Component {
   handleAnswer = event => {
     event.preventDefault();
     this.props.handleAnswer(this.state.selectedAnswer);
-    console.log(this.state.selectedAnswer); 
+    console.log(this.state.selectedAnswer);
     this.setState({selectedAnswer: ''})
   };
 
   render() {
     return (
-      <div className='container'>
-        <h1>{this.props.currentQuestion.question}</h1>
-        <div className='container answers'>
+      <div className='question-container'>
+        <div className='question'>
+          <h1>{this.props.currentQuestion.question}</h1>
+        </div>
+
+        <div className='answers-container'>
   {Object.entries(this.props.currentQuestion.answers).map(
               ([house, answer]) => (
                 <Answer
+                  key={house}
                   value={house}
                   handleAnswerChange ={this.handleAnswerChange}
                   text={answer}
@@ -43,7 +47,7 @@ class Question extends React.Component {
         {this.state.selectedAnswer &&
         <button
         onClick={this.handleAnswer}
-        type='submit'>{this.props.lastQuestion ? 'Get Sorted' : 'Next Question'}</button>}
+        type='submit'>{this.props.lastQuestion ? 'Get Sorted' : <i className="fas fa-angle-double-right"/>}</button>}
       </div>
     )
   }

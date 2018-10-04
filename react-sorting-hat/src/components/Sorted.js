@@ -4,11 +4,11 @@ const Sorted = props => {
 
   const { name } = props.sortedHouse;
     let classes = 'sorted-house '
-    classes += props.sortedHouse.name.toLowerCase(); 
+    classes += props.sortedHouse.name.toLowerCase();
   return (
-    <div className='sorted'>
+    <div className={classes}>
       <p>You have been sorted into</p>
-      <h1 className={classes}>{name}</h1>
+      <h1>{name}</h1>
     </div>
   )
 }

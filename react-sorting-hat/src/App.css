@@ -1,28 +1,181 @@
+* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html, body {
+  font-size: 62.5%;
+}
+
+
+body{
+  height: 100vh;
+  width: 100vh;
+  background: url(https://ibin.co/w800/4HyXUzqz41eL.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
 .App {
   text-align: center;
+
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.start-container {
+  max-width: 600px;
+  width: 100%;
+  height: 80vh;
+  margin: 1% auto;
+  font-family: 'Tangerine', cursive;
+  padding: 5%;
+  background: #f6ead9;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.start-container h1 {
+  font-size: 9rem;
 }
 
-.App-title {
-  font-size: 1.5em;
+.start-container p {
+  font-size: 5rem;
 }
 
-.App-intro {
-  font-size: large;
+.start-container button {
+  border-radius: 10px;
+  background: #5E787C;
+  color: #f2e3cc;
+  padding: 3%;
+  font-family: 'Tangerine', cursive;
+  font-size: 3.6rem;
+  /* border: 2px solid #ebd5b3; */
+  border: none;
+  box-shadow: 5px 5px #ebd5b3;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+
+.question-container {
+  max-width: 600px;
+  width: 100%;
+  height: 80vh;
+  padding: 5%;
+  background: #f6ead9;
+  border-radius: 5px;
+  margin: 1% auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  /* justify-content: space-evenly; */
+}
+
+.question-container .question h1 {
+  font-family: 'Fondamento', cursive;
+  font-size: 4rem;
+  color: #3d4e50;
+}
+
+.question-container button {
+  border-radius: 10px;
+  /* background: #ebd5b3; */
+  background: transparent;
+  color: #5e717c;
+  padding: 1.5% 3%;
+  font-family: 'Petrona', serif;
+  font-size: 3rem;
+  border: none;
+  box-shadow: -5px 5px #5e717c;
+  box-shadow: none;
+  cursor: pointer;
+  align-self: flex-end;
+
+}
+
+.answers-container .answer-button {
+    border-radius: 10px;
+    /* background: #5E787C;
+    color: #f2e3cc; */
+    color: #5E787C;
+    background: transparent;
+    padding: 2%;
+    font-family: 'Petrona', serif;
+    font-size: 2rem;
+    border: none;
+    /* box-shadow: 5px 5px #ebd5b3; */
+    box-shadow: none;
+    cursor: pointer;
+    margin: 3%;
+}
+.answers-container .answer-button:focus {
+  outline: 1px solid #FDD085;
+}
+
+.sorted-house {
+  max-width: 600px;
+  width: 100%;
+  height: 80vh;
+  padding: 5%;
+  background: #f6ead9;
+  border-radius: 5px;
+  margin: 1% auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.sorted-house p {
+  font-family: 'Tangerine', cursive;
+  font-size: 3rem;
+}
+
+.sorted-house h1 {
+  font-family: 'Tangerine', cursive;
+  font-size: 4rem; 
 }
