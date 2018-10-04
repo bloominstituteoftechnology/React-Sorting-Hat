@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import QuestionSet from './QuestionSet';
 
 class Question extends Component {
     constructor() {
@@ -45,35 +46,6 @@ class Question extends Component {
             </form>
         );
     }
-}
-
-function QuestionSet(props) {
-    return (
-        <div>
-            {props.questions.map(q => {
-                return (
-                    <div>
-                        <h2>{q.title}</h2>
-                        <fieldset id={q.num}>
-                        {q.options.map((o, ind) => {
-                            return (
-                                <label>
-                                {o}
-                                <input
-                                onChange={() => props.handleChange(q.num, ind)}
-                                type="radio"
-                                value={ind} 
-                                name={q.num}/>
-                                </label>
-                            )
-                        })}
-                        </fieldset>
-                    </div>
-                )
-            })}
-            <input onSubmit={(event) => this.handleSumbit(event)} type='submit' value='Submit' />
-        </div>
-    );
 }
 
 export default Question
