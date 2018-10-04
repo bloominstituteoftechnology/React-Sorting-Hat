@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import Landing from './components/landing';
 import Question from './components/question';
@@ -56,8 +56,7 @@ let questions = [{
 
 //----------------------------------------------------------------------------------------------------
 
-class App extends Component {
-
+class App extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -75,10 +74,17 @@ class App extends Component {
     event.target.parentNode.className = 'landingHidden';
   }
 
-  changeHandler(event) {
-    console.log(event.target.value);
-    this.setState({event.target.name: event.target.value})
+  changeHandler = (event) => {
+    this.setState({[event.target.name]: event.target.value})
+  }
 
+  submitHandler = (event) => {
+    event.preventDefault();
+    console.log(this.state.length);
+    console.log(this.state.questions[1].choices.indexOf(this.state[0]));
+    for (let i = 1; i < this.state.length; i++) {
+      console.log(this.state.questions[i-1].choices.indexOf(this.state[i]));
+    }
   }
 
   render() {
@@ -86,8 +92,8 @@ class App extends Component {
       <div className="App">
         <Landing hideLanding={this.hideLanding}></Landing>
         <form>
-          {this.state.questions.map((question, i ) => <Question key={i+1} question={question} changeHandler={this.changeHandler}/>) }
-          <input type='submit' value="sort me!" />
+          {this.state.questions.map((question, i) => <Question key={i+1} question={question} changeHandler={this.changeHandler} />)}
+          <button onClick={this.submitHandler}>Sort me!</button>
         </form>
       </div>
     );
