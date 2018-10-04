@@ -1,5 +1,48 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Charmonman');
+
+.container {
+  margin: 30px auto 0;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Charmonman', cursive;
+  font-size: 6rem;
+  margin-bottom: 40px;
+}
+
+.intro-button {
+  font-family: 'Charmonman', cursive;
+  font-size: 3rem;
+  border: 3px solid red;
+  border-radius: 8px;
+  padding: 20px;
+  background: white;
+  cursor: pointer;
+  box-shadow: inset 0px 0px 20px 8px rgba(227,0,0,1);
+}
+
+.intro-button:hover {
+  box-shadow: inset 0px 0px 20px 8px rgba(227,0,0,1), 0px 0px 20px 8px rgba(252,227,63,1);
+}
+
+.questions-container {
+  font-family: 'Charmonman', cursive;
+  margin: 40px 0;
+  padding: 20px;
+  font-size: 3rem;
+}
+
+.answer-button {
+  border: 1px solid red;
+  background: transparent;
+  padding: 10px;
+  margin: 10px;
+}
+
+.answer-button:hover {
+  box-shadow: 0px 0px 10px 4px rgba(252,227,63,1)
 }
