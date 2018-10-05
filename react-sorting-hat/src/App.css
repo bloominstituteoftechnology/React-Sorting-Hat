@@ -121,7 +121,7 @@ body{
   font-size: 4rem;
   color: #3d4e50;
   height: 10vh;
-  margin-bottom: 50px; 
+  margin-bottom: 50px;
 }
 
 .question-container button {
@@ -171,17 +171,76 @@ body{
   background: #f6ead9;
   border-radius: 5px;
   margin: 1% auto;
-  position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+/* colors for houses:
+gryffindor:
+red: #7f0909
+yellow: #ffc500
+slytherin:
+green: #0d6217
+silver: #aaaaaa
+ravenclaw:
+blue: #000a90
+brown: #946b2d
+hufflepuff:
+yellow: #eee117
+black: #000000 */
+
+
 .sorted-house p {
-  font-family: 'Tangerine', cursive;
-  font-size: 3rem;
+  font-family: 'Petrona', serif;
+  font-size: 2rem;
+  padding: 0 3%;
 }
 
 .sorted-house h1 {
   font-family: 'Tangerine', cursive;
-  font-size: 4rem;
+  font-size: 5rem;
+  padding: 30px;
+  border-radius: 50%;
+}
+
+.gryffindor p {
+  color: #7f0909;
+}
+
+.gryffindor h1 {
+  background: #ffc500;
+  color: #7f0909;
+  border: 1px solid #7f0909;
+}
+
+.slytherin p {
+   color: #0d6217;
+}
+
+.slytherin h1 {
+  background: #aaaaaa;
+  color: #0d6217;
+  border: 1px solid #0d6217;
+}
+
+.ravenclaw p {
+  color: #000a90;
+}
+
+.ravenclaw h1 {
+  background: #946b2d;
+  color: #000a90;
+  border: 1px solid #000a90; 
+}
+
+.hufflepuff p {
+  color: #000000;
+}
+
+.hufflepuff h1 {
+  background: #eee117;
+  border: 1px solid black;
+  width: 50%;
 }

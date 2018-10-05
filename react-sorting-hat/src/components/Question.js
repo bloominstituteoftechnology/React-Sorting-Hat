@@ -21,7 +21,6 @@ class Question extends React.Component {
   handleAnswer = event => {
     event.preventDefault();
     this.props.handleAnswer(this.state.selectedAnswer);
-    console.log(this.state.selectedAnswer);
     this.setState({selectedAnswer: ''})
   };
 
