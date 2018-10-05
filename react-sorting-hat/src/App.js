@@ -1,8 +1,9 @@
 import React from 'react';
 import math from 'mathjs'
+import './App.css';
 import Landing from './components/landing';
 import Question from './components/question';
-import './App.css';
+import Results from './components/results';
 
 let questions = [{
     id: 'q1',
@@ -24,18 +25,18 @@ let questions = [{
     id: 'q3',
     copy: 'Question 3: Which of these is your spirit animal?',
     choices: [
-      'A Lion.',
-      'A Badger.',
-      'A Raven.',
-      'A Snake.',
+      'Lion.',
+      'Badger.',
+      'Snake.',
+      'Raven.',
     ]},{
     id: 'q4',
     copy: 'Question 4: Which of these elements resonates most with you?',
     choices: [    
       'Fire',
       'Earth',
-      'Air',
       'Water',
+      'Air',
     ]},{
     id: 'q5',
     copy: 'Question 5: Which of these famous wizards appeals to you most?',
@@ -85,7 +86,6 @@ class App extends React.Component {
     let arr = Object.values(this.state);
     arr.shift();
     arr.pop();
-    console.log(arr);
 
     let arr2 = [];
     let holder;
@@ -100,33 +100,31 @@ class App extends React.Component {
     switch (house) {
       case 0: 
         this.setState({house: 'Gryffindor'})
-        console.log('Gryffindor')
         break; 
       case 1: 
         this.setState({house: 'Hufflepuff'})
-        console.log('Hufflepuff');
         break; 
       case 2: 
         this.setState({house: 'Slytherin'})
-        console.log('Slytherin');
         break; 
       case 3:
         this.setState({house: 'Ravenclaw'})
-        console.log('Ravenclaw');
         break;
       default:
         break; 
     }
+    event.target.parentNode.className = 'formHidden';
   }
 
   render() {
     return (
       <div className="App">
         <Landing hideLanding={this.hideLanding}></Landing>
-        <form>
+        <form className="quiz">
           {this.state.questions.map((question, i) => <Question key={i+1} question={question} changeHandler={this.changeHandler} />)}
           <button onClick={this.submitHandler}>Sort me!</button>
         </form>
+        <Results house={this.state.house}/>
       </div>
     );
   }

@@ -10,7 +10,7 @@
   position: fixed;
 
   /* make sure to delete the below when ready */
-
+ display: none;
 }
 
 h1 {
@@ -25,4 +25,12 @@ fieldset {
   display: flex;
   flex-direction: column;
   border: none;
+}
+
+.formHidden {
+  display: none;
+}
+
+.result {
+  display: none;
 }
