@@ -1,28 +1,249 @@
+* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+
+body{
+
+
+}
+
 .App {
   text-align: center;
+  margin: 0% auto;
+  height: 100vh;
+  width: 100%;
+  background: url(https://ibin.co/w800/4HyXUzqz41eL.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid black;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.start-container {
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 3%;
+  font-family: 'Tangerine', cursive;
+  padding: 5%;
+  background: #f6ead9;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.start-container h1 {
+  font-size: 7rem;
 }
 
-.App-title {
-  font-size: 1.5em;
+.start-container p {
+  font-size: 3rem;
 }
 
-.App-intro {
-  font-size: large;
+.start-container button {
+  border-radius: 10px;
+  background: #5E787C;
+  color: #f2e3cc;
+  padding: 3%;
+  font-family: 'Tangerine', cursive;
+  font-size: 3.6rem;
+  /* border: 2px solid #ebd5b3; */
+  border: none;
+  box-shadow: 5px 5px #ebd5b3;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+
+.question-container {
+  max-width: 600px;
+  width: 90%;
+  height: 450px;
+  padding: 5%;
+  background: #f6ead9;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 1%;
+  display: flex;
+  flex-direction: column;
+
+
+  /* justify-content: space-evenly; */
+}
+
+.question-container .question h1 {
+  font-family: 'Fondamento', cursive;
+  font-size: 3rem;
+  color: #3d4e50;
+  margin-bottom: 30px;
+}
+
+.question-container button {
+  background: transparent;
+  color: #5e717c;
+  padding: 1% 3%;
+  margin-bottom: 0%;
+  font-family: 'Petrona', serif;
+  font-size: 2.6rem;
+  border: none;
+  box-shadow: -5px 5px #5e717c;
+  box-shadow: none;
+  cursor: pointer;
+  align-self: flex-end;
+
+}
+
+.answers-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 297px;
+}
+
+.answers-container .answer-button {
+    border-radius: 10px;
+    color: #5E787C;
+    background: transparent;
+    padding: 2%;
+    font-family: 'Petrona', serif;
+    font-size: 2rem;
+    border: none;
+    /* box-shadow: 5px 5px #ebd5b3; */
+    box-shadow: none;
+    cursor: pointer;
+}
+.answers-container .answer-button:focus {
+  outline: 1px solid #FDD085;
+}
+
+.sorted-house {
+  max-width: 600px;
+  width: 90%;
+  height: 450px;
+  padding: 3% 5%;
+  background: #f6ead9;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-evenly;
+}
+
+/* colors for houses:
+gryffindor:
+red: #7f0909
+yellow: #ffc500
+slytherin:
+green: #0d6217
+silver: #aaaaaa
+ravenclaw:
+blue: #000a90
+brown: #946b2d
+hufflepuff:
+yellow: #eee117
+black: #000000 */
+
+
+.sorted-house p {
+  font-family: 'Petrona', serif;
+  font-size: 1.6rem;
+  padding: 0 3%;
+  margin: 5px auto;
+}
+
+.sorted-house h1 {
+  font-family: 'Tangerine', cursive;
+  font-size: 5rem;
+  padding: 30px;
+  border-radius: 50%;
+  width: 40%;
+  margin: 15px;
+}
+
+.gryffindor p {
+  color: #7f0909;
+}
+
+.gryffindor h1 {
+  background: #ffc500;
+  color: #7f0909;
+  border: 1px solid #7f0909;
+}
+
+.slytherin p {
+   color: #0d6217;
+}
+
+.slytherin h1 {
+  background: #aaaaaa;
+  color: #0d6217;
+  border: 1px solid #0d6217;
+}
+
+.ravenclaw p {
+  color: #000a90;
+}
+
+.ravenclaw h1 {
+  background: #946b2d;
+  color: #000a90;
+  border: 1px solid #000a90;
+}
+
+.hufflepuff p {
+  color: #000000;
+}
+
+.hufflepuff h1 {
+  background: #eee117;
+  border: 1px solid black;
+
 }
