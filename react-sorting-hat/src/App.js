@@ -1,7 +1,8 @@
 import React from 'react';
-import './App.css';
+import math from 'mathjs'
 import Landing from './components/landing';
 import Question from './components/question';
+import './App.css';
 
 let questions = [{
     id: 'q1',
@@ -60,13 +61,14 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      questions: questions,
+      questions: questions,     
       q1: '',
       q2: '',
       q3: '',
       q4: '',
       q5: '',
       q6: '',
+      house: '',
     };
   }
 
@@ -80,10 +82,40 @@ class App extends React.Component {
 
   submitHandler = (event) => {
     event.preventDefault();
-    console.log(this.state.length);
-    console.log(this.state.questions[1].choices.indexOf(this.state[0]));
-    for (let i = 1; i < this.state.length; i++) {
-      console.log(this.state.questions[i-1].choices.indexOf(this.state[i]));
+    let arr = Object.values(this.state);
+    arr.shift();
+    arr.pop();
+    console.log(arr);
+
+    let arr2 = [];
+    let holder;
+
+    for (let i = 0; i < arr.length; i++) {
+      holder = this.state.questions[i].choices.indexOf(arr[i]);
+      arr2.push(holder);
+    }
+    let mode = math.mode(arr2);
+    let house = mode[Math.floor(Math.random() * mode.length)];
+    
+    switch (house) {
+      case 0: 
+        this.setState({house: 'Gryffindor'})
+        console.log('Gryffindor')
+        break; 
+      case 1: 
+        this.setState({house: 'Hufflepuff'})
+        console.log('Hufflepuff');
+        break; 
+      case 2: 
+        this.setState({house: 'Slytherin'})
+        console.log('Slytherin');
+        break; 
+      case 3:
+        this.setState({house: 'Ravenclaw'})
+        console.log('Ravenclaw');
+        break;
+      default:
+        break; 
     }
   }
 
