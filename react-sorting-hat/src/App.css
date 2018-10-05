@@ -203,6 +203,7 @@ black: #000000 */
   font-size: 5rem;
   padding: 30px;
   border-radius: 50%;
+  width: 40%;
 }
 
 .gryffindor p {
@@ -232,7 +233,7 @@ black: #000000 */
 .ravenclaw h1 {
   background: #946b2d;
   color: #000a90;
-  border: 1px solid #000a90; 
+  border: 1px solid #000a90;
 }
 
 .hufflepuff p {
@@ -242,5 +243,5 @@ black: #000000 */
 .hufflepuff h1 {
   background: #eee117;
   border: 1px solid black;
-  width: 50%;
+
 }
