@@ -1,28 +1,36 @@
-.App {
-  text-align: center;
+.landing {
+  visibility: initial;
+  background: lightblue;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+
+  /* make sure to delete the below when ready */
+ display: none;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+h1 {
+  margin: 0;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.landingHidden {
+  display: none;
 }
 
-.App-title {
-  font-size: 1.5em;
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
 }
 
-.App-intro {
-  font-size: large;
+.formHidden {
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.result {
+  display: none;
 }
