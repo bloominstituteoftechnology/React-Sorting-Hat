@@ -1,14 +1,21 @@
 .App {
   text-align: center;
+  background: url(https://wallpapercave.com/wp/NvREGBW.jpg);
+  height: 75rem;
 }
 
 .App-header {
-  background-color: #222;
+  /* background-color: #222; */
   height: 60px;
+  width: 100%;
   padding: 20px;
   color: white;
+  opacity: 0.8;
+  position: fixed;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 3rem;
+  color: white;
+  opacity: 1;
 }

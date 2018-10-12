@@ -1,6 +1,7 @@
 const questionData = [
   {
     questionNumber: 1,
+    quote: "Yes, and so we shall begin",
     question: "What is your favorite quote?",
     response: [
       {
@@ -26,6 +27,7 @@ const questionData = [
   },
   {
     questionNumber: 2,
+    quote: "yes... interesting",
     question: "What is your favorite color?",
     response: [
       {
@@ -48,6 +50,7 @@ const questionData = [
   },
   {
     questionNumber: 3,
+    quote: "very good, and now...",
     question: "What is your favorite operating system?",
     response: [
       {
@@ -70,6 +73,7 @@ const questionData = [
   },
   {
     questionNumber: 4,
+    quote: "very interesting indeed.",
     question: "What is your favorite language?",
     response: [
       {
@@ -92,6 +96,7 @@ const questionData = [
   },
   {
     questionNumber: 5,
+    quote: ".....",
     question: "What is your Myers-Briggs personality?",
     response: [
       {
@@ -114,11 +119,13 @@ const questionData = [
   },
   {
     questionNumber: 6,
+    quote:
+      "Bonus Round, and the most epic of cross overs...your last question is:",
     question: "Who is your favorite character in game of thrones?",
     response: [
       {
         answer:
-          "Tyrion Lannister: That's what i do. I drink, and i know things",
+          'Tyrion Lannister: "That\'s what i do. I drink, and i know things"',
         point: "s"
       },
       {
@@ -126,11 +133,12 @@ const questionData = [
         point: "g"
       },
       {
-        answer: "Arya Stark: (To the god of death: Not today)",
+        answer: "Arya Stark: (What do we say to the god of death?: Not today)",
         point: "h"
       },
       {
-        answer: "Daenerys Targaryen: (has many titles and things)",
+        answer:
+          "Daenerys Targaryen: (has many titles and things and conquers and stuff)",
         point: "r"
       }
     ]

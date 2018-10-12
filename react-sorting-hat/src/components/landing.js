@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+
+import "./landing.css";
+
 import QuestionsContainer from "./questionsContainer";
 import questionData from "../questionData";
 
@@ -7,23 +10,45 @@ class Landing extends Component {
     super(props);
     this.state = {
       questionsDataArray: questionData,
-      points: []
+      sort: false
     };
   }
+
+  startSort = () => {
+    this.setState({
+      sort: true
+    });
+    // window.location.reload();
+  };
+
+  reset = () => {
+    window.location.reload();
+  };
+
   render() {
-    return (
-      <div>
-        <h1>
-          Welcome first years, to Hogwarts school of witchcraft and wizardry.
-          <br />
-          Please click on the button below to get sorted in to houses.
-        </h1>
-        <button>Start the sorting process</button>
-        <QuestionsContainer
-          questionsDataArray={this.state.questionsDataArray}
-        />
-      </div>
-    );
+    if (this.state.sort === true) {
+      return (
+        <div className="questionsContainer">
+          <QuestionsContainer
+            questionsDataArray={this.state.questionsDataArray}
+          />
+
+          <div className="resetButton">
+            <button onClick={this.reset}>Rest the sorting process</button>
+          </div>
+        </div>
+      );
+    } else
+      return (
+        <div className="intro">
+          <h1 className="introduction">
+            Welcome first years, to Hogwarts school of witchcraft and wizardry.
+            <br />
+            Please click on the button below to get sorted in to houses.
+          </h1>
+          <button onClick={this.startSort}>Start the sorting process</button>
+        </div>
+      );
   }
 }
 
