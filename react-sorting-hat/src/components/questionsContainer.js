@@ -106,6 +106,7 @@ class QuestionsContainer extends Component {
           <img
             className="hat"
             src="https://pm1.narvii.com/6354/2581cf8b65eb24d8902e8dbd391e2666e110438c_hq.jpg"
+            alt="hat loading"
           />
           <h1 className="sortPage">In that case you belong to:...</h1>
           <button onClick={this.pickWinner}>SORT</button>
@@ -117,6 +118,7 @@ class QuestionsContainer extends Component {
         <img
           className="hat"
           src="https://pm1.narvii.com/6354/2581cf8b65eb24d8902e8dbd391e2666e110438c_hq.jpg"
+          alt="hat questions"
         />
         <Questions
           questionDecrement={this.questionDecrement}

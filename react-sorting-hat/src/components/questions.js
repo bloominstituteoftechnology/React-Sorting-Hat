@@ -26,6 +26,7 @@ const Questions = props => {
                 type="radio"
                 name={`${props.questionNumber}`}
                 value={response.point}
+                required
               />
               {response.answer}
             </div>
