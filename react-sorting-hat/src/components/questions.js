@@ -33,8 +33,12 @@ const Questions = props => {
           ))}
         </form>
 
-        <button onClick={props.questionDecrement}>previous</button>
-        <button onClick={props.questionIncrement}>next</button>
+        <button className="buttons" onClick={props.questionDecrement}>
+          previous
+        </button>
+        <button className="buttons" onClick={props.questionIncrement}>
+          next
+        </button>
       </div>
     );
   }

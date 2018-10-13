@@ -33,8 +33,10 @@ class Landing extends Component {
             questionsDataArray={this.state.questionsDataArray}
           />
 
-          <div className="resetButton">
-            <button onClick={this.reset}>Rest the sorting process</button>
+          <div className="reset">
+            <button className="resetButton" onClick={this.reset}>
+              Rest the sorting process
+            </button>
           </div>
         </div>
       );
@@ -46,7 +48,14 @@ class Landing extends Component {
             <br />
             Please click on the button below to get sorted in to houses.
           </h1>
-          <button onClick={this.startSort}>Start the sorting process</button>
+          <button className="sort" onClick={this.startSort}>
+            Start the sorting process
+          </button>
+          <br />
+          <img
+            className="emblem"
+            src="https://media.proprofs.com/images/QM/user_images/1804324/qm1429456415.png"
+          />
         </div>
       );
   }

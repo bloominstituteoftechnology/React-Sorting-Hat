@@ -1,9 +1,10 @@
 import React from "react";
 import "./hufflepuff.css";
+import { HouseContainer } from "../../reusableStyles";
 
 const Hufflepuff = () => {
   return (
-    <div className="hContainer">
+    <HouseContainer className="hContainer">
       <div>
         <h1>Hufflepuff</h1>
         <h2>Founder: Helga Hufflepuff</h2>
@@ -13,31 +14,31 @@ const Hufflepuff = () => {
         <h2>Head: Pomona Sprout</h2>
         <h2>House Ghost: Fat Friar</h2>
       </div>
-      <ul>
+      <dl>
         Values:
         <li>dedication</li>
         <li>patience</li>
         <li>loyalty</li>
         <li>tolerance</li>
         <li>fairness</li>
-      </ul>
-      <ul>
+      </dl>
+      <dl>
         Famous members:
         <li>Newton Scamander</li>
         <li>Gorgan Stump</li>
         <li>Bridget Wenlock</li>
         <li>Nymphadora Tonks</li>
         <li>Pomona Sprout</li>
-      </ul>
+      </dl>
       <div>
         <h2>Summary:</h2>
         <p>
           Some that may not like you may say you are as vanilla as they come.
           <br /> Boring and don't stand out.
-          <br /> Doesn't matter
+          <br /> Doesn't matter, You do you.
         </p>
       </div>
-    </div>
+    </HouseContainer>
   );
 };
 

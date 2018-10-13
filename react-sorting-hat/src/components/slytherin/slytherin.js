@@ -1,9 +1,10 @@
 import React from "react";
 import "./slytherin.css";
+import { HouseContainer } from "../../reusableStyles";
 
 const Slytherin = () => {
   return (
-    <div className="sContainer">
+    <HouseContainer className="sContainer">
       <div>
         <h1>Slytherin</h1>
         <h2>Founder: Salazar Slytherin</h2>
@@ -13,31 +14,31 @@ const Slytherin = () => {
         <h2>Head: Severus Snape</h2>
         <h2>House Ghost: Bloody Baron</h2>
       </div>
-      <ul>
+      <dl>
         Values:
         <li>cunning</li>
         <li>resourcefulness</li>
         <li>ambition</li>
         <li>self-preservation</li>
         <li>fraternity</li>
-      </ul>
-      <ul>
+      </dl>
+      <dl>
         Famous members:
         <li>Merlin</li>
         <li>Horace Slughorn</li>
         <li>Gormlaith Gaunt</li>
         <li>Tom Riddle</li>
         <li>Severus Snape</li>
-      </ul>
+      </dl>
       <div>
         <h2>Summary:</h2>
         <p>
           Some that may not like you may say you are pretty much the bad guy
           <br /> Always conspiring, always evil
-          <br /> Thats fine
+          <br /> Thats fine, you don't care what others say.
         </p>
       </div>
-    </div>
+    </HouseContainer>
   );
 };
 
