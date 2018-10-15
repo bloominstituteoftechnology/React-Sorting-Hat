@@ -53,6 +53,7 @@ class Landing extends Component {
           </button>
           <br />
           <img
+            alt="emb"
             className="emblem"
             src="https://media.proprofs.com/images/QM/user_images/1804324/qm1429456415.png"
           />

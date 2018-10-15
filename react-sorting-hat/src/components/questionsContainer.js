@@ -24,6 +24,8 @@ class QuestionsContainer extends Component {
     const h = [];
     const r = [];
     const s = [];
+    let newFirst = [];
+    let newSecond = [];
     let newArr = [];
     //
     let pointsArray = this.state.pointsArray;
@@ -44,29 +46,63 @@ class QuestionsContainer extends Component {
       }
     }
     //
-    let first = g.length >= h.length ? g : h;
-    let second = r.length >= s.length ? r : s;
-    let third = s.length >= g.length ? s : g;
-    let fourth = h.length >= r.length ? h : r;
-    let fifth = first.length >= second.length ? first : second;
-    let sixth = third.length >= fourth.length ? third : fourth;
+    let first = [];
+    if (g.length === h.length) {
+      newFirst.push(g[0]);
+      newFirst.push(h[0]);
+      let randomized1 = newFirst[Math.round(Math.random())];
+      if (randomized1 === g[0]) {
+        first = g;
+      } else if (randomized1 === h[0]) {
+        first = h;
+      }
+    } else first = g.length > h.length ? g : h;
+
+    let second = [];
+    if (r.length === s.length) {
+      newSecond.push(r[0]);
+      newSecond.push(s[0]);
+      let randomized2 = newSecond[Math.round(Math.random())];
+      if (randomized2 === r[0]) {
+        second = r;
+      } else if (randomized2 === s[0]) {
+        second = s;
+      }
+    } else second = r.length > s.length ? r : s;
+
+    // let first = g.length >= h.length ? g : h;
+    // let second = r.length >= s.length ? r : s;
+    // let third = s.length >= g.length ? s : g;
+    // let fourth = h.length >= r.length ? h : r;
+    // let fifth = first.length >= second.length ? first : second;
+    // let sixth = third.length >= fourth.length ? third : fourth;
     //
-    if (fifth.length === sixth.length) {
-      let five = fifth.shift();
-      let six = sixth.shift();
+    // if (fifth.length === sixth.length) {
+    //   let five = fifth.shift();
+    //   let six = sixth.shift();
+    //   let randomized = Math.round(Math.random());
+    //   newArr.push(five);
+    //   newArr.push(six);
+    //   this.setState({
+    //     winner: newArr[randomized]
+    //   });
+    // } else if (fifth.length > sixth.length) {
+    //   let five = fifth.shift();
+    //   this.setState({
+    //     winner: five
+    //   });
+    // }
+    let third = [];
+    if (first.length === second.length) {
+      newArr.push(first[0]);
+      newArr.push(second[0]);
       let randomized = Math.round(Math.random());
-      newArr.push(five);
-      newArr.push(six);
-      // return newArr[randomized]
       this.setState({
         winner: newArr[randomized]
       });
-      //
-    } else if (fifth.length > sixth.length) {
-      let five = fifth.shift();
-      // return five
+    } else if ((third = first.length > second.length ? first : second)) {
       this.setState({
-        winner: five
+        winner: third[0]
       });
     }
   };
