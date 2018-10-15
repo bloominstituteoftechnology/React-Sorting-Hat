@@ -57,7 +57,7 @@ class QuestionsContainer extends Component {
         first = h;
       }
     } else first = g.length > h.length ? g : h;
-
+    //
     let second = [];
     if (r.length === s.length) {
       newSecond.push(r[0]);
@@ -69,29 +69,7 @@ class QuestionsContainer extends Component {
         second = s;
       }
     } else second = r.length > s.length ? r : s;
-
-    // let first = g.length >= h.length ? g : h;
-    // let second = r.length >= s.length ? r : s;
-    // let third = s.length >= g.length ? s : g;
-    // let fourth = h.length >= r.length ? h : r;
-    // let fifth = first.length >= second.length ? first : second;
-    // let sixth = third.length >= fourth.length ? third : fourth;
     //
-    // if (fifth.length === sixth.length) {
-    //   let five = fifth.shift();
-    //   let six = sixth.shift();
-    //   let randomized = Math.round(Math.random());
-    //   newArr.push(five);
-    //   newArr.push(six);
-    //   this.setState({
-    //     winner: newArr[randomized]
-    //   });
-    // } else if (fifth.length > sixth.length) {
-    //   let five = fifth.shift();
-    //   this.setState({
-    //     winner: five
-    //   });
-    // }
     let third = [];
     if (first.length === second.length) {
       newArr.push(first[0]);

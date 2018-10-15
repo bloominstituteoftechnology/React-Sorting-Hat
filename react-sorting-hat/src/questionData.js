@@ -2,25 +2,22 @@ const questionData = [
   {
     questionNumber: 1,
     quote: "Yes, and so we shall begin",
-    question: "What is your favorite quote?",
+    question: "What is your favorite Art Period?",
     response: [
       {
-        answer: "It's better to be a lion for a day than a sheep all your life",
+        answer: "Romanticism",
         point: "g"
       },
       {
-        answer:
-          "Don't be afraid of being outnumbered. Eagles fly alone. Pigeons flock together",
+        answer: "Renaissance",
         point: "r"
       },
       {
-        answer:
-          " A dog will look down when they have done wrong, but a snake will look you right in the eyes.",
+        answer: "Neoclassical",
         point: "s"
       },
       {
-        answer:
-          "Honey badger takes what it wants, Honey badger don't care. Honey badger don't give a S...",
+        answer: "Baroque",
         point: "h"
       }
     ]
@@ -28,22 +25,23 @@ const questionData = [
   {
     questionNumber: 2,
     quote: "yes... interesting",
-    question: "What is your favorite color?",
+    question:
+      "Hanging out at a pub or a restaurant with your mates, what do you order?",
     response: [
       {
-        answer: "blue",
+        answer: "wine",
         point: "r"
       },
       {
-        answer: "green",
+        answer: "whiskey",
         point: "s"
       },
       {
-        answer: "yellow",
+        answer: "juice",
         point: "h"
       },
       {
-        answer: "red",
+        answer: "beer",
         point: "g"
       }
     ]

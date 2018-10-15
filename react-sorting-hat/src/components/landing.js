@@ -18,7 +18,6 @@ class Landing extends Component {
     this.setState({
       sort: true
     });
-    // window.location.reload();
   };
 
   reset = () => {
