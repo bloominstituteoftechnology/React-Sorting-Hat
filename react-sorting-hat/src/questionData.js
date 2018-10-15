@@ -26,7 +26,7 @@ const questionData = [
     questionNumber: 2,
     quote: "yes... interesting",
     question:
-      "Hanging out at a pub or a restaurant with your mates, what do you order?",
+      "Hanging out at a pub or a restaurant with your friends, what beverage do you order?",
     response: [
       {
         answer: "wine",
@@ -37,7 +37,7 @@ const questionData = [
         point: "s"
       },
       {
-        answer: "juice",
+        answer: "cocktail",
         point: "h"
       },
       {
