@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SortingQuiz=props=>
+const QuizTemplate=props=>
         <div className='quiz-item' style={(props.app_state!==1 || props.quiz_state!==props.number)?{display:'none'}:{}}>
             <h3 className='text-flow'>{props.item.question}</h3>
             <div className='btn' onClick={()=>props.answerItem(1)}><p className='text-flow'>{props.item.answer1}</p></div>
@@ -9,4 +9,4 @@ const SortingQuiz=props=>
             <div className='btn' onClick={()=>props.answerItem(4)}><p className='text-flow'>{props.item.answer4}</p></div>
         </div>
 
-export default SortingQuiz;
+export default QuizTemplate;

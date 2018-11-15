@@ -1,6 +1,6 @@
 import React from 'react'; 
-import QuizStyle from './quizstyle.js';
-const Sorting=props=>props.sortingItems.map(
-    (question,index)=><sorting answerItem={props.answersortingItem} item={question} key={index} app_state={props.app_state} sorting_state={props.sorting_state} number={index}/>)
+import QuizTemplate from './quiztemplate.js';
+const Quiz=props=>props.quizItems.map(
+    (question,index)=><QuizTemplate answerItem={props.answerQuizItem} item={question} key={index} app_state={props.app_state} quiz_state={props.quiz_state} number={index}/>)
 
-export default Sorting;
+export default Quiz;

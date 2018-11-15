@@ -1,28 +1,65 @@
 .App {
   text-align: center;
+  font-family: ParryHotter;
+  src: url(ParryHotter.ttf);
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("hogwarts-banners.jpg");
+  opacity: .9;
+  z-index: -1;
+}
+h1 {
+  font-family: 'Almendra', serif;
+}
+img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.btn {
+  border-radius: 10px;
   height: 80px;
+  background-color: #FFD700;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.btn:hover {
+  background-color: rgba(154,0,0,0.85);
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.quiz-item .btn {
+  display: block;
+  width: 100%;
+  font-size: 16px;
 }
-
-.App-title {
-  font-size: 1.5em;
+.quiz-item {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 30px;
 }
-
-.App-intro {
-  font-size: large;
+.quiz-item .btn p {
+  text-align: left;
+  padding-top: 5px;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.quiz-item h3 {
+  font-family: 'Almendra', serif;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.result p {
+  font-family: 'Almendra', serif;
+  font-size: 20px;
+}
+ul{
+  font-family: 'Almendra', serif;
+  font-size: 20px;
+}
+h2 {
+  font-family: 'Almendra', serif;
 }

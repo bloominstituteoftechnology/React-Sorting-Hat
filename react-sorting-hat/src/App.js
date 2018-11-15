@@ -1,80 +1,80 @@
 import React, { Component } from 'react';
 import './App.css';
-import LandingPage from './components/LandingPage.js';
-import SortingQuiz from './components/SortingQuiz.js';
-import Outcome from './components/Outcome.js';
+import HomePage from './components/homepage.js';
+import Quiz from './components/quiz.js';
+import Results from './components/results.js';
 const resultsArr=[
   {
     'house': 'Gryffindor',
     'image':'https://images.pottermore.com/bxd3o8b291gf/49zkCzoZlekCmSq6OsycAm/da6278c1af372f18f8b6a71b226e0814/PM_House_Pages_400_x_400_px_FINAL_CREST2.png?w=550&h=550&fit=thumb&f=center&q=85',
-    'quote': "Where dwell the brave at heart, their daring, nerve and chivalry set Gryffindors apart.",
-    'qualities': 'Gryffindors are generally regarded as brave, though sometimes to the point of recklessness.',
-    'wizards':['Harry Potter', 'Godric Gryffindor', 'Albus Dumbledore']
+    'quote': '"Where dwell the brave at heart, their daring, nerve and chivalry set Gryffindors apart."',
+    'qualities': 'Gryffindors are well known for courage, bravery, daring, nerve, and chivalry.',
+    'wizards':['Albus Dumbledore', 'Rubeus Hagrid', 'Sirius Black']
   },
   {
     'house': 'Ravenclaw',
     'image': 'https://images.pottermore.com/bxd3o8b291gf/5pnnQ5puTuywEEW06w2gSg/91abff3d923b4785ed79e9abda07bd07/PM_House_Pages_400_x_400_px_FINAL_CREST.png?w=550&h=550&fit=thumb&f=center&q=85',
-    'quote': 'Where those of wit and learning, will always find their kind.',
-    'qualities': 'Ravenclaws tend to be academically motivated and talented students.',
-    'wizards': ['Rowena Ravenclaw', 'Filius Flitwick','Garrick Ollivander']
+    'quote': '"Where those of wit and learning, will always find their kind."',
+    'qualities': 'Ravenclaws value intelligence, wit, cleverness, creativity, and wisdom.',
+    'wizards': ['Luna Lovegood', 'Myrtle Warren','Padma Patil']
   },
   {
     'house': 'Hufflepuff',
     'image': 'https://images.pottermore.com/bxd3o8b291gf/2GyJvxXe40kkkG0suuqUkw/e1a64ec404cf5f19afe9053b9d375230/PM_House_Pages_400_x_400_px_FINAL_CREST3.png?w=550&h=550&fit=thumb&f=center&q=85',
-    'quote': 'Hufflepuffs value hard work, dedication, patience, loyalty, and fair play.',
-    'qualities':'Students belonging to this house are known to be hard-working, friendly, loyal, honest and rather impartial.',
-    'wizards': ['Helga Hufflepuff', 'Cedric Diggory', 'Pomona Sprout']
+    'quote': '"You might belong in Hufflepuff, where they are just and loyal. Those patient Hufflepuffs are true and unafraid of toil."',
+    'qualities':'Hufflepuffs are well known for loyalty, patience, hard work, fair-play, honesty, and tolerance.',
+    'wizards': ['Helga Hufflepuff', 'Cedric Diggory', 'Newton Scamanger']
   },
   {
     'house':'Slytherin',
     'image': 'https://images.pottermore.com/bxd3o8b291gf/4U98maPA5aEUWcO8uOisOq/e01e17cc414b960380acbf8ace1dc1d5/PM_House_Pages_400_x_400_px_FINAL_CREST4.png?w=550&h=550&fit=thumb&f=center&q=85',
-    'quote': 'Those cunning folk use any means, to achieve their ends.',
-    'qualities': 'Slytherins tend to be ambitious, shrewd, cunning, strong leaders, and achievement-oriented.',
-    'wizards': ['Lord Voldemort', 'Salazar Slytherin', 'Severus Snape']
+    'quote': '"Perhaps in Slytherin, You\'ll make your real friends.Those cunning folk use any means to achieve their ends."',
+    'qualities': 'Slytherins value ambition, leadership, cunning, determination, and resourcefulness.',
+    'wizards': ['Severus Snape', 'Scorpius Malfoy', 'Lord Voldemort']
   }
 ]
 const quizArr=[
 {
   'question': 'Which of these traits best describes you?',
-  'answer1': 'Brave',
-  'answer2':'Clever',
-  'answer3':'Loyal',
-  'answer4': 'Cunning'
+  'answer1': 'Chivalrous',
+  'answer2':'Witty',
+  'answer3':'Honest',
+  'answer4': 'Ambitious'
 },
 {
-  'question': "Your friend has a problem - they're being picked on! What do you do?",
-  'answer1': 'Rush in without thinking and defend them!',
-  'answer2': 'Quickly formulate a brilliant plan to help them.',
-  'answer3': "Run and get a teacher - they'll be able to help more than you.",
-  'answer4': 'Consider carefully...what do you get out of this?'
+  'question': "Your classmate's life is in danger. What will you do to help them?",
+  'answer1': 'To the rescue I go! There is no time for thought!',
+  'answer2': 'Let us not be brash. We shall think it through and formulate a plan.',
+  'answer3': "I must tell a professor straight away! They will know what to do.",
+  'answer4': 'Wait. What\'s in it for me?'
 },
 {
-  'question': 'Which of these would be the best pet EVER?',
-  'answer1': 'A hippogriff: fierce, fast and fearless.',
-  'answer2': 'An owl or a phoenix: something clever.',
-  'answer3': 'A dog or cat: something loyal and kind.',
-  'answer4': 'A snake or a lizard.'
+  'question': 'It\'s report card time. What areas can you improve in?',
+  'answer1': 'I could be less reckless and think before I act.',
+  'answer2': 'I should probably admit that I don\'t actually know it all.',
+  'answer3': 'I could learn to say no once in awhile.',
+  'answer4': 'Improve? Surely you jest. I\'m perfect as I am.'
 },
 {
-  'question': 'What would your family say is your worst trait?',
-  'answer1': "Reckless - you don't think before you act.",
-  'answer2': "A bit of a know-it-all.",
-  'answer3': "You're too nice for your own good.",
-  'answer4': 'Worst trait? Really? You have no bad traits.'
+  'question': 'Choose the animal with which you most closely identify.',
+  'answer1': "A lion.",
+  'answer2': "A badger.",
+  'answer3': "An eagle.",
+  'answer4': 'A serpent.'
 },
 {
-  'question': 'Which of these would be your dream jobs?',
-  'answer1': 'HP World: Auror...Real world: explorer or detective – something exciting!',
-  'answer2': 'HP World: Hogwarts professor…Real world: university professor or doctor.',
-  'answer3': "HP World: Herbology professor…Real world: a children's librarian or teacher.",
-  'answer4': "HP World: someone high up in the Ministry…Real world: something high up in the government...Power is everything!"
+  'question': 'Which job is most appealing to you?',
+  'answer1': 'Something courageous like firefighting.',
+  'answer2': 'A doctor or perhaps a professor.',
+  'answer3': 'I like people. Wherever I can be of service, that\'s where I want to be!',
+  'answer4': 'A position of leadership and power, obviously.'
 },
 {
-  'question': 'If you could have any superpower, which would you have?',
-  'answer1': 'Super strength or invincibility: all the better for adventuring!',
-  'answer2': "The power of foresight: so you know what's coming.",
+  'question': 'Choose your power.',
+  'answer1': 'Invincibility!',
+  'answer2': 'Clarivoyance',
   'answer3': 'Invisibility.',
-  'answer4': 'Mind control: then everyone will do exactly what you say!'
+  'answer4': 'Power over all things.'
 }
 ]
 class App extends Component {
@@ -117,9 +117,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <LandingPage style={this.state.app_state} change_app_state={this.changeAppState}/>
-        <SortingQuiz answerQuizItem={this.answerItem} quizItems={quizArr} app_state={this.state.app_state} quiz_state={this.state.quiz_state}/>
-        <Outcome style={this.state.app_state} result={this.state.chosenHouse} houseInfo={resultsArr}/>
+        <HomePage style={this.state.app_state} change_app_state={this.changeAppState}/>
+        <Quiz answerQuizItem={this.answerItem} quizItems={quizArr} app_state={this.state.app_state} quiz_state={this.state.quiz_state}/>
+        <Results style={this.state.app_state} result={this.state.chosenHouse} houseInfo={resultsArr}/>
       </div>
     );
   }
