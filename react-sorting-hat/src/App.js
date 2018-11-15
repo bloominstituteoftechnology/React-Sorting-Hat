@@ -3,6 +3,9 @@ import './App.css';
 import HomePage from './components/homepage.js';
 import Quiz from './components/quiz.js';
 import Results from './components/results.js';
+
+
+
 const resultsArr=[
   {
     'house': 'Gryffindor',
