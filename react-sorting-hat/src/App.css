@@ -1,6 +1,6 @@
 @font-face {
-  font-family: parselto;
-  src: url(PARSELTO.TTF);
+  font-family: hogwarts;
+  src: url(hogwarts.ttf);
 }
 
 .App {
@@ -19,8 +19,8 @@
 h1 {
   color: lightgray;
   font-size:70px;
-  font-family: parselto;
-  src: url(PARSELTO.TTF);
+  font-family: hogwarts;
+  src: url(hogwarts.ttf);
 }
 img {
   display: block;
@@ -28,8 +28,8 @@ img {
   margin-bottom: 30px;
 }
 .btn {
-  font-family: parselto;
-  src: url(PARSELTO.TTF);
+  font-family: hogwarts;
+  src: url(hogwarts.ttf);
   border-radius: 10px;
   height: 80px;
   background-color: #FFD700;
@@ -57,26 +57,26 @@ img {
 }
 .quiz-item h3 {
   color: lightgray;
-  font-size:40px;
-  font-family: parselto;
-  src: url(PARSELTO.TTF);
+  font-size:30px;
+  font-weight: bold;
+  font-family: hogwarts;
+  src: url(hogwarts.ttf);
   text-align: center;
   margin: 30px;
 }
 .result p {
   color: lightgray;
-  font-family: parselto;
-  font-weight: bold;
-  src: url(PARSELTO.TTF);
+  font-family: hogwarts;
+  src: url(hogwarts.ttf);
   font-size: 20px;
 }
 ul{
   list-style-type: none;
-  font-family: parselto;
-  src: url(PARSELTO.TTF);
+  font-family: hogwarts;
+  src: url(hogwarts.ttf);
   
 }
 h2 {
-  font-family: parselto;
-  src: url(PARSELTO.TTF);
+  font-family: hogwarts;
+  src: url(hogwarts.ttf);
 }
