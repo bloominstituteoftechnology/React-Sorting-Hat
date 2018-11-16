@@ -1,28 +1,82 @@
+@font-face {
+  font-family: hogwarts;
+  src: url(hogwarts.ttf);
+}
+
 .App {
   text-align: center;
+  background-image: url(./img/hogwarts2.jpg); 
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .9;
+  z-index: -1;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
+h1 {
+  color: lightgray;
+  font-size:60px;
+  font-family: hogwarts;
+  src: url(hogwarts.ttf);
+}
+img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.btn {
+  font-family: hogwarts;
+  src: url(hogwarts.ttf);
+  border-radius: 10px;
   height: 80px;
+  background-color: #FFD700;
+  font-size: 40px;
+  margin: 35px;
+}
+.btn:hover {
+  background-color: #c50000;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.quiz-item .btn {
+  display: block;
+  width: 80%;
+  font-size: 18px;
 }
-
-.App-title {
-  font-size: 1.5em;
+.quiz-item {
+  font-size:16px;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 30px;
 }
-
-.App-intro {
-  font-size: large;
+.quiz-item .btn p {
+  text-align: center;
+  padding-top: 25px;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.quiz-item h3 {
+  color: lightgray;
+  font-size:30px;
+  font-weight: bold;
+  font-family: hogwarts;
+  src: url(hogwarts.ttf);
+  text-align: center;
+  margin: 20px;
+}
+.result p {
+  color: lightgray;
+  font-family: hogwarts;
+  src: url(hogwarts.ttf);
+  font-size: 20px;
+}
+ul{
+  list-style-type: none;
+  font-family: hogwarts;
+  src: url(hogwarts.ttf);
+  
+}
+h2 {
+  font-family: hogwarts;
+  src: url(hogwarts.ttf);
 }
