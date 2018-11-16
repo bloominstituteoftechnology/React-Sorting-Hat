@@ -1,14 +1,13 @@
 @font-face {
-  font-family: hogwarts;
-  src: url(hogwarts.ttf);
+  font-family: parselto;
+  src: url(PARSELTO.TTF);
 }
 
 .App {
   text-align: center;
-}
-
-.background {
-  background-color: lightgray;
+  background-image: url(./img/hogwarts.jpeg);
+  background-size: 100%;
+  background-repeat: no-repeat;
   position: fixed;
   top: 0;
   width: 100%;
@@ -16,10 +15,12 @@
   opacity: .9;
   z-index: -1;
 }
+
 h1 {
+  color: lightgray;
   font-size:70px;
-  font-family: hogwarts;
-  src: url(hogwarts.ttf);
+  font-family: parselto;
+  src: url(PARSELTO.TTF);
 }
 img {
   display: block;
@@ -27,6 +28,8 @@ img {
   margin-bottom: 30px;
 }
 .btn {
+  font-family: parselto;
+  src: url(PARSELTO.TTF);
   border-radius: 10px;
   height: 80px;
   background-color: #FFD700;
@@ -43,6 +46,7 @@ img {
   font-size: 18px;
 }
 .quiz-item {
+  font-size:16px;
   width: 50%;
   margin: 0 auto;
   margin-top: 30px;
@@ -52,24 +56,27 @@ img {
   padding-top: 25px;
 }
 .quiz-item h3 {
-  font-size:50px;
-  font-family: hogwarts;
-  src: url(hogwarts.ttf);
+  color: lightgray;
+  font-size:40px;
+  font-family: parselto;
+  src: url(PARSELTO.TTF);
   text-align: center;
   margin: 30px;
 }
 .result p {
-  font-family: hogwarts;
-  src: url(hogwarts.ttf);
+  color: lightgray;
+  font-family: parselto;
+  font-weight: bold;
+  src: url(PARSELTO.TTF);
   font-size: 20px;
 }
 ul{
   list-style-type: none;
-  font-family: hogwarts;
-  src: url(hogwarts.ttf);
+  font-family: parselto;
+  src: url(PARSELTO.TTF);
   
 }
 h2 {
-  font-family: hogwarts;
-  src: url(hogwarts.ttf);
+  font-family: parselto;
+  src: url(PARSELTO.TTF);
 }
