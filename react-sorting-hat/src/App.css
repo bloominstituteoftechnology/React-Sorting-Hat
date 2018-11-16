@@ -5,7 +5,7 @@
 
 .App {
   text-align: center;
-  background-image: url(./img/hogwarts.jpeg);
+  background-image: url(./img/hogwarts.jpeg); 
   background-size: 100%;
   background-repeat: no-repeat;
   position: fixed;
@@ -18,7 +18,7 @@
 
 h1 {
   color: lightgray;
-  font-size:70px;
+  font-size:60px;
   font-family: hogwarts;
   src: url(hogwarts.ttf);
 }
@@ -62,7 +62,7 @@ img {
   font-family: hogwarts;
   src: url(hogwarts.ttf);
   text-align: center;
-  margin: 30px;
+  margin: 20px;
 }
 .result p {
   color: lightgray;
