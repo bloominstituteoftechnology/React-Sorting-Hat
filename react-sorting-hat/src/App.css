@@ -1,28 +1,21 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  background: url(https://wallpapercave.com/wp/NvREGBW.jpg);
+  height: 75rem;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  /* background-color: #222; */
+  height: 60px;
+  width: 100%;
   padding: 20px;
   color: white;
+  opacity: 0.8;
+  position: fixed;
 }
 
 .App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  font-size: 3rem;
+  color: white;
+  opacity: 1;
 }

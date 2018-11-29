@@ -1,0 +1,29 @@
+.questionsContainer {
+  padding-top: 10rem;
+}
+
+.intro {
+  padding-top: 10rem;
+}
+
+.reset {
+  padding-top: 1rem;
+}
+.resetButton {
+  font-size: 1.2rem;
+  border-radius: 2%;
+}
+
+.introduction {
+  color: purple;
+}
+
+.emblem {
+  padding-top: 12rem;
+}
+
+.sort {
+  margin-top: 2rem;
+  font-size: 2rem;
+  border-radius: 25%;
+}
