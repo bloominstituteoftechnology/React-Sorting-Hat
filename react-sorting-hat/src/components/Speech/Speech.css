@@ -12,27 +12,27 @@
   margin-bottom: 10px;
   font-weight: 700;
 }
-.speech-prev {
+.speech-prev, .speech-next {
   position: absolute;
   top: 100%;
-  right: 90%;
-  transform: translateX(50%);
   background: transparent;
-  border: 1px solid #222;
+  border: 2px solid #222;
+  border-radius: 5px;
+  color: #222;
+  font-family: inherit;
+  font-size: 1.3vw;
+  font-weight: 700;
   height: 3vw;
   width: 5vw;
   cursor: pointer;
 }
+.speech-prev {
+  right: 90%;
+  transform: translateX(50%);
+}
 .speech-next {
-  position: absolute;
-  top: 100%;
   left: 90%;
   transform: translateX(-50%);
-  background: transparent;
-  border: 1px solid #222;
-  height: 3vw;
-  width: 5vw;
-  cursor: pointer;
 }
 .speech-next:active, .speech-prev:active {
   background: #222;
