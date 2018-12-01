@@ -1,0 +1,43 @@
+.speech {
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.speech p {
+  font-size: 3vw;
+  text-align: center;
+  line-height: 3.5vw;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+.speech-prev {
+  position: absolute;
+  top: 100%;
+  right: 90%;
+  transform: translateX(50%);
+  background: transparent;
+  border: 1px solid #222;
+  height: 3vw;
+  width: 5vw;
+  cursor: pointer;
+}
+.speech-next {
+  position: absolute;
+  top: 100%;
+  left: 90%;
+  transform: translateX(-50%);
+  background: transparent;
+  border: 1px solid #222;
+  height: 3vw;
+  width: 5vw;
+  cursor: pointer;
+}
+.speech-next:active, .speech-prev:active {
+  background: #222;
+  color: #eee;
+}
+.speech-next:focus, .speech-prev:focus {
+  outline: 0;
+}
