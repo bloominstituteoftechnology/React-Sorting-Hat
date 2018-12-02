@@ -48,6 +48,9 @@ table {
 }
 
 /* My Styles: */
+html, body, #root {
+  height: 100%;
+}
 
 html {
   font-family: 'Cormorant Garamond', serif;
@@ -56,11 +59,11 @@ html {
   user-select: none;
 }
 body {
-  background: url('./img/parchment-bg.jpg') center no-repeat;
+  background: url('./img/parchment-bg-dark.jpg') center no-repeat;
   background-size: 100% auto;
 }
 .logo {
-  background: url('./img/hogwarts-coat-of-arms.png') center no-repeat;
+  background: url('./img/hogwarts-coat-of-arms-low.png') center no-repeat;
   background-size: contain;
   width: 20%;
   height: 20vw;
