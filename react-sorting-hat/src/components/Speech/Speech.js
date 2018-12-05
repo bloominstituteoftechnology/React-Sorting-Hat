@@ -5,7 +5,6 @@ class Speech extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      index: 0,
       speech: [<p>You may come to me from elsewhere - Great Hall or through the DOM,<br/>
         But either way you’d better lend a listen to my song...</p>,
   
@@ -38,31 +37,17 @@ class Speech extends React.Component {
       ],
     }
   }
-  handleChange = (bool) => {
-    this.setState((prevState) => {
-      if (bool){
-        return {
-          index: prevState.index === prevState.speech.length - 1 ? 0 : prevState.index + 1,
-        }
-      } else {
-        return {
-          index: prevState.index === 0 ? 0 : prevState.index - 1,
-        }
-      }
-    })
-  }
   render(){
     return (
       <div className="speech">
-        {this.state.index === 0 ? null :
-        <button className="btn speech-prev" onClick={() => this.handleChange(false)}>PREV</button> }
-        {this.state.speech[this.state.index]}
-        {this.state.index === this.state.speech.length - 1 ? null :
+        {this.props.index === 0 ? null :
+        <button className="btn speech-prev" onClick={() => this.props.handleChange(false)}>PREV</button> }
+        {this.state.speech[this.props.index]}
         <button className="btn speech-next" 
-        onClick={() => this.handleChange(true)}>
-          NEXT
-        </button> }
-        <button className="btn skip">SKIP</button>
+        onClick={() => this.props.handleChange(true)}>
+          {this.props.index === 9 ? 'BEGIN' : 'NEXT'}
+        </button>
+        {this.props.index === 9 ? null : <button className="btn skip" onClick={this.props.handleSkip}>SKIP</button>}
       </div>
     );
   }

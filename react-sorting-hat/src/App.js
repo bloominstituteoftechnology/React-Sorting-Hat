@@ -9,8 +9,27 @@ class App extends Component {
     super(props);
     this.state = {
       loading: false,
-      sorting: true,
+      speechIndex: 0,
+      sortIndex: 0,
+      sorting: false,
     };
+  }
+  handleSpeechChange = (bool) => {
+    this.setState((prevState) => {
+      if (bool){
+        return {
+          speechIndex: prevState.speechIndex + 1,
+        }
+      } else {
+        return {
+          speechIndex: prevState.speechIndex === 0 ? 0 : prevState.speechIndex - 1,
+        }
+      }
+    }, () => this.state.speechIndex > 9 ? this.setState({sorting: true}) : null);
+  }
+  handleSkipSpeech = () => {
+    console.log('test');
+    this.setState({ sorting: true });
   }
   render() {
     return (
@@ -18,7 +37,7 @@ class App extends Component {
       this.state.sorting ? <Sorting /> :
       <div>
         <div className='logo'></div>
-        <Speech />
+        <Speech index={this.state.speechIndex} handleChange={this.handleSpeechChange} handleSkip={this.handleSkipSpeech}/>
         <div className='signature'></div>
       </div>
     );

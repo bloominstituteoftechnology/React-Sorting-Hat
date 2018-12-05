@@ -1,20 +1,52 @@
 import React from 'react';
 import './Sorting.css';
+import arrow from '../../img/right-arrow.png';
+import dict from '../../google-10000-english';
 
 class Sorting extends React.Component {
   constructor(props){
     super(props);
     this.state = {
       input: '',
+      index: 0,
       gryffindor: 0,
       ravenclaw: 0,
       hufflepuff: 0,
       slytherin: 0,
+      sorting: true,
+      result: '',
     };
+    this.dialogue = [
+      <p>You hear a voice inside your head...</p>,
+      <p>"Curious...very curious.  You've quite the mind...</p>,
+      <p>Perhaps you wouldn't mind answering a few questions?</p>,
+      <p>What is your earliest memory?</p>,
+      <p>What is your greatest fear?  Why?</p>,
+      <p>What is your biggest regret?</p>,
+      <p>What does it mean to be "great"?</p>,
+      <p>What do you yearn for?</p>,
+      <p>What house do you belong in?</p>
+    ];
+  }
+  nextPage = () => {
+    this.setState((prevState) => {
+      return {
+        index: prevState.index + 1,
+      };
+    })
   }
   submit = () => {
     if(!this.state.input){
       alert('Please answer the question');
+      return;
+    }
+    const searchDict = () => { 
+      return dict.split('\n').some((x) => {
+        return this.state.input.split(' ').map(x => x.toLowerCase()).indexOf(x) >= 0;
+      });
+    }
+    if (!searchDict()){
+      alert('Please respond in English');
       return;
     }
       const proxyUrl = 'https://cors-escape.herokuapp.com/';
@@ -41,8 +73,11 @@ class Sorting extends React.Component {
         }
       }
       console.log('request sent successfully'); // Informs you request was sent
-      this.setState({
-        input: '',
+      this.setState((prevState) => {
+        return {
+          input: '',
+          index: prevState.index + 1,
+        };
       });
   }
   handleChange = e => {
@@ -51,6 +86,7 @@ class Sorting extends React.Component {
     })
   }
   handleTally = (response) => { // Completely arbitrary way of determining house
+    this.wordList(response.text);
     if (response.polarity === 'positive'){
       this.setState((prevState) => ({ gryffindor: prevState.gryffindor + 1 }));
     }
@@ -78,18 +114,97 @@ class Sorting extends React.Component {
       }
     }
   }
+  wordList = (str) => {
+    const houses = [
+      {
+        name: 'gryffindor',
+        words: ['gryffindor', 'protect', 'brave', 'love', 'fight', 'sacrifice'],
+      },
+      {
+        name: 'ravenclaw',
+        words: ['ravenclaw', 'study', 'smart', 'think', 'logic', 'book'],
+      },
+      {
+        name: 'hufflepuff',
+        words: ['hufflepuff', 'care', 'friends', 'work', 'loyalty', 'patience'],
+      },
+      {
+        name: 'slytherin',
+        words: ['slytherin', 'destiny', 'snake', 'pure', 'Voldemort', 'ambitious'],
+      }
+    ];
+    houses.forEach(x => {
+      x.words.forEach(y => {
+        if (new RegExp(y, 'gi').test(str)){
+          this.setState((prevState) => {
+            return {
+              [x.name]: prevState[x.name] + 1.5
+            };
+          }, () => {
+            if (this.state.index > 8) this.handleTotal()
+          });
+        }
+      })
+    })
+  }
+  handleTotal = () => {
+    let count = -1;
+    let result = '';
+    const tie = [];
+    for (let key in this.state){
+      if (key !== 'index'){
+        if (this.state[key] > count){
+          count = this.state[key];
+          result = key;
+        } 
+        else if (this.state[key] === count){
+          tie.includes(result) ? tie.push(key) : tie.push([result, key]);
+        }
+      }
+    }
+    if (tie.length){
+      result = tie[Math.floor(Math.random() * tie.length)];
+    }
+    this.setState({
+      sorting: false,
+      result: result,
+    }, () => console.log(this.state));
+  }
   render(){
+    if (this.state.sorting){
      return (
        <div>
-         <input type="text" 
-          placeholder="Write answer here" 
-          value={this.state.input} 
-          onChange={this.handleChange}
-        />
-         <button type="button" onClick={this.submit}>Submit</button>
-         <button type="button" onClick={() => console.log(this.state)}>STATE</button>
+         <div className="questions">
+          {this.dialogue[this.state.index]}
+         </div>
+         <div className="entry">
+          <textarea type="text" 
+            style={this.state.index < 3 || this.state.index > 8 ? {visibility: 'hidden'} : {}} 
+            placeholder="Write answer here" 
+            value={this.state.input} 
+            onChange={this.handleChange}
+            maxLength={700}></textarea>
+            <div>
+              <button 
+              style={this.state.index < 3 || this.state.index > 8 ? {visibility: 'hidden'} : {}} 
+              onClick={this.submit}>
+                Submit
+              </button>
+              <img src={arrow} 
+              style={this.state.index >= 3 && this.state.index <= 8 ? {visibility: 'hidden'} : {}}
+              onClick={this.nextPage} 
+              alt="next-arrow" />
+            </div>
+         </div>
        </div>
      );
+    } else {
+      return (
+        <div className="result">
+          <h1>{this.state.result.charAt(0).toUpperCase() + this.state.result.slice(1)}</h1>
+        </div>
+      );
+    }
   }
 }
 
