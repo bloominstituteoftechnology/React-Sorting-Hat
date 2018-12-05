@@ -28,7 +28,6 @@ class App extends Component {
     }, () => this.state.speechIndex > 9 ? this.setState({sorting: true}) : null);
   }
   handleSkipSpeech = () => {
-    console.log('test');
     this.setState({ sorting: true });
   }
   render() {

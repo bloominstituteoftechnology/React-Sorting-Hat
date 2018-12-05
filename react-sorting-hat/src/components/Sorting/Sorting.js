@@ -61,18 +61,17 @@ class Sorting extends React.Component {
       xhr.onreadystatechange = () => {
         if (xhr.readyState === 4){ // If readyState == DONE
           if (xhr.status === 200){ // If successful
-            console.log('SUCCESS!');
+            // console.log('SUCCESS!');
             const response = JSON.parse(xhr.responseText);
-            console.log(response);
             this.handleTally(response);
           } else { // If failed
-            console.log('FAILED', xhr.status);
+            console.log('HTTP REQUEST FAILED', xhr.status);
           }
         } else { // If state changed but is not yet done
-          console.log('xhr processing');
+          // console.log('xhr processing');
         }
       }
-      console.log('request sent successfully'); // Informs you request was sent
+      // console.log('request sent successfully'); // Informs you request was sent
       this.setState((prevState) => {
         return {
           input: '',
