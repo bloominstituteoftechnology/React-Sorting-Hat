@@ -167,7 +167,7 @@ class Sorting extends React.Component {
     this.setState({
       sorting: false,
       result: result,
-    }, () => console.log(this.state));
+    });
   }
   render(){
     if (this.state.sorting){
