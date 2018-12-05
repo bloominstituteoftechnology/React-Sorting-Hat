@@ -1,4 +1,8 @@
-const dict = `the
+const dict = `gryffindor
+hufflepuff
+ravenclaw
+slytherin
+the
 of
 and
 to
@@ -9997,10 +10001,6 @@ varieties
 arbor
 mediawiki
 configurations
-poison
-gryffindor
-hufflepuff
-ravenclaw
-slytherin`;
+poison`;
 
 export default dict;

@@ -18,7 +18,7 @@
     height: 40vh;
 }
 textarea {
-    width: 75%;
+    width: 50%;
     height: 15vh;
     resize: none;
     background: #fcf7e6;
@@ -51,14 +51,4 @@ button:active {
 }
 button:focus {
     outline: 0;
-}
-.result {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.result h1 {
-    font-size: 6vw;
 }

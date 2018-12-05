@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+.gryffindor,
+.ravenclaw,
+.hufflepuff,
+.slytherin {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gryffindor {
+    background: #d3a625;
+}
+.ravenclaw {
+    background: #946b2d;
+}
+.hufflepuff {
+    background: #ecb939;
+}
+.slytherin {
+    background: #5d5d5d;
+}
+.gryffindor img,
+.ravenclaw img,
+.hufflepuff img,
+.slytherin img {
+    width: 20%;
+    height: auto;
+}
+.house-title h1 {
+    font-size: 6vw;
+}
+.house-info {
+    width: 60%;
+    padding: 10px;
+}
+.gryffindor .house-info {
+    border: 5px solid #740001;
+    background: #eeba30;
+}
+.ravenclaw .house-info {
+    border: 5px solid #0e1a40;
+    background: #5d5d5d;
+}
+.hufflepuff .house-info {
+    border: 5px solid #372e29;
+    background:  #f0c75e;
+}
+.slytherin .house-info {
+    border: 5px solid #1a472a;
+    background: #aaaaaa;
+}
+.house-info p {
+    font-size: 2.5rem;
+    font-size: calc(12px + .9vw);
+    line-height: 3.5rem;
+    margin-bottom: 2rem;
+}
+.house-info p:last-of-type{
+    margin-bottom: 0;
+}
+.top-left {
+    position: absolute;
+    left: 7vw;
+    top: 7vw;
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+    height: 7vw;
+    width: 50%;
+    border: 3px solid black;
+}
+.top-right {
+    position: absolute;
+    right: 7vw;
+    top: 7vw;
+    transform: translateX(50%) translateY(-50%) rotate(45deg);
+    height: 7vw;
+    width: 50%;
+    border: 3px solid black;
+}
+.bottom-left {
+    position: absolute;
+    left: 7vw;
+    bottom: 7vw;
+    transform: translateX(-50%) translateY(50%) rotate(45deg);
+    height: 7vw;
+    width: 50%;
+    border: 3px solid black;
+}
+.bottom-right {
+    position: absolute;
+    right: 7vw;
+    bottom: 7vw;
+    transform: translateX(50%) translateY(50%) rotate(-45deg);
+    height: 7vw;
+    width: 50%;
+    border: 3px solid black;
+}
+.gryffindor .top-left,
+.gryffindor .top-right,
+.gryffindor .bottom-left,
+.gryffindor .bottom-right {
+    background: #ae0001;
+}
+.ravenclaw .top-left,
+.ravenclaw .top-right,
+.ravenclaw .bottom-left,
+.ravenclaw .bottom-right {
+    background: #222f5b;
+}
+.hufflepuff .top-left,
+.hufflepuff .top-right,
+.hufflepuff .bottom-left,
+.hufflepuff .bottom-right {
+    background: #726255;
+}
+.slytherin .top-left,
+.slytherin .top-right,
+.slytherin .bottom-left,
+.slytherin .bottom-right {
+    background: #2a623d;
+}
