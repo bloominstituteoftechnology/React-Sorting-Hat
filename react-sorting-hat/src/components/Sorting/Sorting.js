@@ -11,12 +11,12 @@ class Sorting extends React.Component {
       input: '',
       index: 0,
       entered: 0,
-      sorting: true,
+      sorting: false,
       gryffindor: 0,
       ravenclaw: 0,
       hufflepuff: 0,
       slytherin: 0,
-      result: '',
+      result: 'slytherin',
     };
     this.dialogue = [
       <p>You hear a voice inside your head...</p>,

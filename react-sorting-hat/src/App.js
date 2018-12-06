@@ -11,7 +11,7 @@ class App extends Component {
       loading: false,
       speechIndex: 0,
       sortIndex: 0,
-      sorting: false,
+      sorting: true,
     };
   }
   handleSpeechChange = (bool) => {

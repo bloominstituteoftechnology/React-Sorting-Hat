@@ -5,7 +5,7 @@
 .ravenclaw,
 .hufflepuff,
 .slytherin {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -28,11 +28,12 @@
 .ravenclaw img,
 .hufflepuff img,
 .slytherin img {
-    width: 20%;
-    height: auto;
+    height: 20vw;
+    width: auto;
+    cursor: auto;
 }
 .house-title h1 {
-    font-size: 6vw;
+    font-size: 5vw;
 }
 .house-info {
     width: 60%;
@@ -55,10 +56,9 @@
     background: #aaaaaa;
 }
 .house-info p {
-    font-size: 2.5rem;
-    font-size: calc(12px + .9vw);
-    line-height: 3.5rem;
-    margin-bottom: 2rem;
+    font-size: 1.4vw;
+    line-height: 2.5vw;
+    margin-bottom: 1.5rem;
 }
 .house-info p:last-of-type{
     margin-bottom: 0;
