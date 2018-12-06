@@ -11,7 +11,7 @@ class Sorting extends React.Component {
       input: '',
       index: 0,
       entered: 0,
-      sorting: false,
+      sorting: true,
       gryffindor: 0,
       ravenclaw: 0,
       hufflepuff: 0,
@@ -205,6 +205,7 @@ class Sorting extends React.Component {
             placeholder="Write answer here" 
             value={this.state.input} 
             onChange={this.handleChange}
+            onKeyDown={ (e) => {if ((e.keyCode === 10 || e.keyCode === 13) && e.ctrlKey) this.handleEnter() } }
             maxLength={700}></textarea>
             <div>
               {this.state.index >= 3 ? 
