@@ -1,0 +1,59 @@
+.speech {
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.speech p {
+  font-size: 3vw;
+  text-align: center;
+  line-height: 4vw;
+  margin-bottom: 10px;
+  font-weight: 700;
+} 
+.btn {
+  background: transparent;
+  border: 2px solid #222;
+  color: #222;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.speech-prev, .speech-next {
+  position: absolute;
+  top: 100%;
+  border-radius: 5px;
+  font-size: 1.3vw;
+  height: 3vw;
+  width: 5vw;
+}
+.speech-prev {
+  right: 90%;
+  transform: translateX(50%);
+}
+.speech-next {
+  left: 90%;
+  transform: translateX(-50%);
+}
+.btn:active {
+  background: #222;
+  color: #eee;
+}
+.btn:focus {
+  outline: 0;
+}
+.skip {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  background: transparent;
+  border: 1px solid #222;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 1vw;
+  font-weight: 700;
+  padding: 0 1vw;
+  height: 3vw;
+  cursor: pointer;
+}

@@ -1,0 +1,24 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/react-sorting-hat/node_modules
+
+# testing
+/react-sorting-hat/coverage
+
+# production
+/react-sorting-hat/build
+
+# misc
+react-sorting-hat/.DS_Store
+react-sorting-hat/.env.local
+react-sorting-hat/.env.development.local
+react-sorting-hat/.env.test.local
+react-sorting-hat/.env.production.local
+
+react-sorting-hat/npm-debug.log*
+react-sorting-hat/yarn-debug.log*
+react-sorting-hat/yarn-error.log*
+
+#netlify
+.netlify
