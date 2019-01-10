@@ -1,28 +1,73 @@
 .App {
   text-align: center;
+  background-color: rgb(20, 19, 19);
+  font-family: 'Belleza', sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.container {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgb(241, 237, 237);
+  font-size: 28px;
+  padding: 0 0 100px 0;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
+.banner {
+  max-width: 1200px;
 }
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  font-size: 28px;
+  align-items: center;
+  border: 3px solid rgb(32, 31, 31);
+  padding: 20px;
+  margin: 0 20px 0 20px;
+}
+
+.question p {
+  font-size: 36px;
+}
+
+button {
+  font-size: 24px;
+  padding: 20px 10px 20px 10px;
+  width: 1000px;
+  margin: 10px 0;
+  background-color: rgb(240, 232, 232);
+  border: 1px solid #c3c3c3;
+  border-radius: 5px;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  font-size: 48px;
+}
+
+.results img {
+  width: 20%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.init {
+  margin: 20px 100px 36px 100px;
+}
+
+.blurb p {
+  margin: 0 100px 0 100px;
+}
+
+button:hover {
+  background-color: #d0d0d0;
 }
