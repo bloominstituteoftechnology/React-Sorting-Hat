@@ -1,6 +1,27 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+'use strict'
+
+/**
+ * Dependencies
+ */
+
+const React = require('react')
+const logo = require('./logo.svg')
+
+/**
+ * Constants
+ */
+
+const Component = React.Component
+
+/**
+ * Import styles
+ */
+
+require('./App.scss')
+
+/**
+ * Define component
+ */
 
 class App extends Component {
   render() {
@@ -14,8 +35,12 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+/**
+ * Export component
+ */
+
+module.exports = App
