@@ -16,5 +16,21 @@ export const Questions =
         answer3: {answerText:"You doubt my blood?!", pointArr: [0, 0, 2, 4]},
         answer4: {answerText:"Fairly", pointArr: [1, 1, 2, 2]}
     },
+    {
+        id: 2,
+        questionText: "What animal do you most identify with?",
+        answer1: {answerText:"Lion", pointArr: [5, 0,0,0],
+        answer2: {answerText:"Badger", pointArr: [0,5,0,0],         
+        answer3: {answerText:"Hufflepuff", pointArr: [0,0,5,0],         
+        answer4: {answerText:"Snake", pointArr: [0,0,0,5],        
+     },          
+      {
+        id: 3,
+        questionText: "A friend is about to sing in front of the whole school and it's clear they're not ready. What do you do?",
+        answer1: {answerText:"Offer to help them practice more.", pointArr: [5, 0,0,0],
+        answer2: {answerText:"Say nothing.", pointArr: [0,5,0,0],         
+        answer3: {answerText:"Say they'll do great.", pointArr: [0,0,5,0],         
+        answer4: {answerText:"Tell them they're not so good.", pointArr: [0,0,0,5],        
+     },             
 
 ]
