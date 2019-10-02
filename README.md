@@ -2,7 +2,7 @@
 
 Welcome to Hogwarts, the School of Whitchcraft and Wizardy. One of the tools that is used by students of Hogwarts on their first day entering the school is notoriously known as the `Sorting Hat`. Your goal throughout this stretch assignment is to build the `Sorting Hat` using ReactJS.
 
-### Project Set Up
+### Project Set Up ###
 
 - `cd` into `react-sorting-hat` directory and run `npm install` or `yarn install` to retrieve your dependancies.
 - run `npm start` or `yarn start` to spin up your `webpack development server`
