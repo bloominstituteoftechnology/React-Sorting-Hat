@@ -35,36 +35,66 @@ const questions = [
   }
 ]
 
+const newState = {
+  tally: {
+    g: 0,
+    h: 0,
+    r: 0,
+    s: 0,
+  },
+  currentQuestion: false,
+  class: ["n", 0],
+  result: ""
+}
+
 export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      tally: {
-        g: 0,
-        h: 0,
-        r: 0,
-        s: 0
-      },
-      currentQuestion: false
+      ...newState
     }
   }
 
   handleAnswerQuestion = (ans) => {
-    const prevTally = this.state.tally
-    const currentQuestion = this.state.currentQuestion < 4 ? this.state.currentQuestion + 1 : false
-    this.setState({ tally: {...prevTally, [ans]: prevTally[ans] + 1}, currentQuestion })
+    const prevTally = this.state.tally   
+    let highestTally
+    if (prevTally[ans] + 1 >= this.state.class[1]) {
+      highestTally = [ans, prevTally[ans] + 1]
+    }
+    const currentQuestion = this.state.currentQuestion < 5 ? this.state.currentQuestion + 1 : false
+    if (currentQuestion === 5) {
+      switch (this.state.class[0]) {
+        case "g":
+          this.setState({ result: "Gryffindor "});
+          break;
+        case "h":
+          this.setState({ result: "Hufflepuff "});
+          break;
+        case "r":
+          this.setState({ result: "Ravenclaw "});
+          break;
+        case "s":
+          this.setState({ result: "Slytherin "});
+          break;
+      }
+    }
+    this.setState({ tally: {...prevTally, [ans]: prevTally[ans] + 1}, currentQuestion, class: highestTally })
   }
 
   renderQuestions  = () => {
+    if (this.state.currentQuestion === 5) {
+
+      return <h2>{this.state.result}</h2>
+    }
     return <Question handleAnswerQuestion={this.handleAnswerQuestion} question={questions[this.state.currentQuestion - 1]} />
   }
   
   render() {
-    console.log(this.state.tally)
+    console.log(this.state)
     return (
       <div>
-        {this.state.currentQuestion && this.renderQuestions()}
-        {!this.state.currentQuestion && <button onClick={() => this.setState({ currentQuestion: 1 })}>Start!</button>}
+        {this.state.currentQuestion  && this.renderQuestions()}
+        {(!this.state.currentQuestion || this.state.currentQuestion === 5 ) && <button onClick={() => this.setState({ ...newState, currentQuestion: 1  })}>Start!</button>}
       </div>
     )
   }

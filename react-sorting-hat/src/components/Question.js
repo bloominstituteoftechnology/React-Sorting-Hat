@@ -2,8 +2,6 @@ import React from 'react';
 
 const Question = ({ question, handleAnswerQuestion }) => {
     const questionKeys = Object.keys(question).slice(1,5)
-    console.log(questionKeys)
-    console.log(question)
 
     const answerQuestion = (ans) => {
         handleAnswerQuestion(question[questionKeys[ans]])
