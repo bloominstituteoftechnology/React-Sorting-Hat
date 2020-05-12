@@ -1,3 +1,53 @@
 .result {
   text-align: center;
 }
+.home{
+  text-align: center;
+  color:black;
+  height:600px;
+ 
+  background-image:url('../src/img/houses_all.png'); 
+  background-color: rgba(204, 204, 204, 0.89);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-blend-mode: lighten;
+}
+.ui {
+ font-size: 20px;
+}
+.gryffindor{
+  height:700px;
+  background-color: black;
+  color:goldenrod;
+  font-size: 18px;
+  
+}
+p{
+  margin: 10px 25px;
+}
+.hufflepuf{
+  height:700px;
+  background-color: black;
+  color:yellow;
+  font-size: 18px;
+}
+
+.ravenclaw{
+  height:700px;
+  background-color: black;
+  color:rgb(21, 172, 241);
+  font-size: 18px;
+  
+}
+
+.slytherin{
+  height:700px;
+  background-color: black;
+  color:rgb(10, 150, 10);
+  font-size: 18px;
+}
+.navigation{
+  background-color: black;
+}

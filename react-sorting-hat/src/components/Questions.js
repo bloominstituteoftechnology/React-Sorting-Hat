@@ -1,11 +1,14 @@
 import React from 'react';
 import 'survey-react/survey.css';
 import * as Survey from "survey-react";
-//import {house1} from "../img/house1.png"
- const house1 =require('../img/house1.png')
- const house2 =require('../img/house2.png')
- const house3 =require('../img/house3.png')
- const house4 =require('../img/house4.png')
+import data from './data.json';
+
+ const house1 =require('../img/house1.png');
+ const house2 =require('../img/house2.png');
+ const house3 =require('../img/house3.png');
+ const house4 =require('../img/house4.png');
+ 
+
 Survey
     .StylesManager
     .applyTheme("winterstone")
@@ -140,29 +143,29 @@ class Questions extends React.Component {
 
                 {
                     (this.state.isComplete && this.state.resultFiltered === 1 ) ? (
-                        <div className='result'>
-                            <h2>thanks for completing the survey</h2>
-                            <p>you belong to the first house</p>
-                            <img src ={house1}  alt = 'Hogarts house one'/>
+                        <div className='result gryffindor'>
+                            <h2> Congradulations, you belong to Gryffindor house!</h2>
+                            <img src ={house1}  alt = 'Hogarts house'/>
+                            <p>{data.gryffindor}</p>
                         </div>
 
                     ) : (this.state.isComplete && this.state.resultFiltered === 2) ? (
-                        <div className='result'>
-                            <h2>thanks for completing the survey</h2>
-                            <p>you belong to the 2 house</p>
-                            <img src ={house2}  alt = 'Hogarts house one'/>
+                        <div className='result hufflepuf'>
+                            <h2>Congradulations, you belong to Hufflepuff house!</h2>
+                            <img src ={house2}  alt = 'Hogarts house'/>
+                            <p>{data.hufflepuf}</p>
                         </div>
                     ) : (this.state.isComplete && this.state.resultFiltered === 3) ? (
-                        <div className='result'>
-                            <h2>thanks for completing the survey</h2>
-                            <p>you belong to the 3 house</p>
-                            <img src ={house3}  alt = 'Hogarts house one'/>
+                        <div className='result ravenclaw'>
+                            <h2>Congradulations, you belong to Ravenclaw house!</h2>
+                            <img src ={house3}  alt = 'Hogarts house'/>
+                            <p>{data.ravenclaw}</p>
                         </div>
                     ) : (this.state.isComplete && this.state.resultFiltered === 4) ? (
-                        <div className='result'>
-                            <h2>thanks for completing the survey</h2>
-                            <p>you belong to the 4 house</p>
-                            <img src ={house4}  alt = 'Hogarts house one'/>
+                        <div className='result slytherin'>
+                            <h2>Congradulations, you belong to Slytherin house!</h2>
+                            <img src ={house4}  alt = 'Hogarts house'/>
+                            <p>{data.slytherin}</p>
                         </div>
                     ) : null 
                 }
@@ -174,3 +177,4 @@ class Questions extends React.Component {
 }
 
 export default Questions;
+
