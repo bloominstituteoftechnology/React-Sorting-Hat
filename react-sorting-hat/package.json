@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+
     "install": "^0.13.0",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
@@ -10,6 +11,7 @@
     "react-scripts": "3.1.2",
     "survey-react": "^1.7.5",
     "surveyjs": "^2.0.4"
+
   },
   "scripts": {
     "start": "react-scripts start",
