@@ -124,11 +124,10 @@ class Questions extends React.Component {
                         { text:"Salazar Slytherin", value:4 },
                     ],
                 },
-        
             ]
         };
 
-        console.log(this.state,"this state")
+        // console.log(this.state,"this state")
         return(
             <div>
                 {
