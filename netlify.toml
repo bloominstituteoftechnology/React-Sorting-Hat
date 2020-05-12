@@ -1,7 +1,7 @@
 [build]
   command = "yarn run build"
   publish="/build"
-  base = "/react-storing-hat"
+  base = "/react-sorting-hat"
 
   [[redirects]]
     from = "/*"
