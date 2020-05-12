@@ -1,5 +1,5 @@
 
-# https://nervous-brown-427829.netlify.app/ deployed app
+Deployed app https://nervous-brown-427829.netlify.app/ 
 
 # React Sorting Hat - Stretch Assignment
 
