@@ -4,7 +4,7 @@
 .home{
   text-align: center;
   color:black;
-  height:600px;
+  height:auto;
   background-image:url('../src/img/houses_all.png'); 
   background-color: rgba(204, 204, 204, 0.89);
   background-position: center;
@@ -12,40 +12,47 @@
   background-size: cover;
   position: relative;
   background-blend-mode: lighten;
+  margin-bottom: 30px;
 }
+#testbtn{
+  margin-bottom: 50px;
+} 
 .ui {
  font-size: 20px;
 }
 .gryffindor{
-  height:700px;
+  height:auto;
   background-color: black;
   color:goldenrod;
   font-size: 18px;
-  
+  padding-bottom: 40px;
 }
 p{
   margin: 10px 25px;
 }
 .hufflepuf{
-  height:700px;
+  height:auto;
   background-color: black;
   color:yellow;
   font-size: 18px;
+  padding-bottom: 40px;
 }
 
 .ravenclaw{
-  height:700px;
+  height:auto;
   background-color: black;
   color:rgb(21, 172, 241);
   font-size: 18px;
+  padding-bottom: 40px;
   
 }
 
 .slytherin{
-  height:700px;
+  height:auto;
   background-color: black;
   color:rgb(10, 150, 10);
   font-size: 18px;
+  padding-bottom: 40px;
 }
 .navigation{
   background-color: black;
@@ -53,4 +60,19 @@ p{
 
 .grid{
   margin: 10px 25px;
+}
+
+#welcomeimg{
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (max-width: 600px) {
+  #welcome {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .result img{
+    width: 100%;
+  }
 }
