@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Stepper from "@material-ui/core/Stepper";
@@ -16,8 +16,9 @@ import FormLabel from "@material-ui/core/FormLabel";
 
 import hat from "../assets/images/hat.jpg";
 import theme from "../ui/Theme";
+import Sorting from "../components/Sorting";
 
-const BlueRadio = withStyles({
+const GreenRadio = withStyles({
   root: {
     color: "#A69F69",
     "&$checked": {
@@ -137,19 +138,24 @@ function getStepQuestions(step) {
   }
 }
 
-export default function VerticalLinearStepper() {
+export default function VerticalLinearStepper(props) {
   const classes = useStyles();
-  const [activeStep, setActiveStep] = React.useState(0);
+  const [activeStep, setActiveStep] = useState(0);
   const steps = getSteps();
-  const [value, setValue] = React.useState("");
+  const [value, setValue] = useState("");
+  const [userAnswers, setUserAnswers] = useState([]);
 
-  const handleChange = (event) => {
-    setValue(event.target.value);
+  const handleChange = (e) => {
+    setValue(e.target.value);
   };
 
-  const handleNext = () => {
+  const handleNext = (e) => {
+    console.log(e.target.name);
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    setUserAnswers([...userAnswers, value]);
+    setValue('')
   };
+  console.log(userAnswers);
 
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
@@ -159,6 +165,12 @@ export default function VerticalLinearStepper() {
     setActiveStep(0);
   };
 
+  const handleResults = () => {
+      props.handleAnswers(userAnswers);
+      setUserAnswers([]);
+  }
+  console.log(props.forlogs);
+  
   return (
     <div className={classes.root}>
       <Stepper
@@ -188,48 +200,48 @@ export default function VerticalLinearStepper() {
                   onChange={handleChange}
                 >
                   <FormControlLabel
-                    value={getStepQuestions(index)[1].a1}
-                    control={<BlueRadio />}
+                    value={getStepQuestions(index)[1].house}
+                    control={<GreenRadio />}
                     label={getStepQuestions(index)[1].a1}
                   />
                   <FormControlLabel
-                    value={getStepQuestions(index)[2].a2}
-                    control={<BlueRadio />}
+                    value={getStepQuestions(index)[2].house}
+                    control={<GreenRadio />}
                     label={getStepQuestions(index)[2].a2}
                   />
                   <FormControlLabel
-                    value={getStepQuestions(index)[3].a3}
-                    control={<BlueRadio />}
+                    value={getStepQuestions(index)[3].house}
+                    control={<GreenRadio />}
                     label={getStepQuestions(index)[3].a3}
                   />
                   <FormControlLabel
-                    value={getStepQuestions(index)[4].a4}
-                    control={<BlueRadio />}
+                    value={getStepQuestions(index)[4].house}
+                    control={<GreenRadio />}
                     label={getStepQuestions(index)[4].a4}
                   />
                 </RadioGroup>
-              </FormControl>
-              <div className={classes.actionsContainer}>
-                <div>
-                  <Button
-                    disabled={activeStep === 0}
-                    onClick={handleBack}
-                    className={classes.button}
-                    color="primary"
-                    variant="outlined"
-                  >
-                    Back
-                  </Button>
-                  <Button
-                    variant="outlined"
-                    color="primary"
-                    onClick={handleNext}
-                    className={classes.button}
-                  >
-                    {activeStep === steps.length - 1 ? "Finish" : "Next"}
-                  </Button>
+                <div className={classes.actionsContainer}>
+                  <div>
+                    <Button
+                      disabled={activeStep === 0}
+                      onClick={handleBack}
+                      className={classes.button}
+                      color="primary"
+                      variant="outlined"
+                    >
+                      Back
+                    </Button>
+                    <Button
+                      variant="outlined"
+                      color="primary"
+                      onClick={handleNext}
+                      className={classes.button}
+                    >
+                      {activeStep === steps.length - 1 ? "Finish" : "Next"}
+                    </Button>
+                  </div>
                 </div>
-              </div>
+              </FormControl>
             </StepContent>
           </Step>
         ))}
@@ -238,9 +250,9 @@ export default function VerticalLinearStepper() {
           <>
             <Typography>All steps completed - you&apos;re finished</Typography>
             <Button
-              component={Link}
-              to="/"
-              onClick={handleReset}
+            //   component={Link}
+            //   to="/"
+              onClick={handleResults}
               className={classes.button}
               variant="outlined"
               color="primary"
@@ -257,7 +269,6 @@ export default function VerticalLinearStepper() {
             >
               Start Over
             </Button>
-
           </>
           // </Paper>
         )}

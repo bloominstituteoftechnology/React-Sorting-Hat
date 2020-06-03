@@ -4,6 +4,7 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import QuestionStepper from "./components/QuestionStepper";
 import Header from "./components/Header";
 import Welcome from "./components/Welcome";
+import Sorting from './components/Sorting';
 
 import theme from "./ui/Theme";
 
@@ -19,7 +20,7 @@ function App() {
           />
           <Route
             path="/sort"
-            render={(props) => <QuestionStepper {...props} />}
+            render={(props) => <Sorting {...props} />}
           />
         </Router>
       </ThemeProvider>
