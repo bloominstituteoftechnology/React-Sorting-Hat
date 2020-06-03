@@ -29,6 +29,16 @@ export default createMuiTheme({
       fontSize: "4rem",
       textAlign: "center",
     },
+    h2: {
+      color: olive,
+      fontSize: "3rem",
+      textAlign: "center",
+    },
+    h3: {
+      color: olive,
+      fontSize: "2.5rem",
+      textAlign: "center",
+    },
     h5: {
       color: brown,
       fontSize: "2rem",

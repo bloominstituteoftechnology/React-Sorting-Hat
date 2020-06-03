@@ -150,12 +150,10 @@ export default function VerticalLinearStepper(props) {
   };
 
   const handleNext = (e) => {
-    console.log(e.target.name);
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
     setUserAnswers([...userAnswers, value]);
     setValue('')
   };
-  console.log(userAnswers);
 
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
@@ -169,7 +167,6 @@ export default function VerticalLinearStepper(props) {
       props.handleAnswers(userAnswers);
       setUserAnswers([]);
   }
-  console.log(props.forlogs);
   
   return (
     <div className={classes.root}>
