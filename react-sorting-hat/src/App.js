@@ -26,10 +26,8 @@ const [formValues, setFormValues] = useState(initialFormValues)
 
 // Helpers``````````
 const onInputChange  = e => {
-  const { name } = e.target
-  const { value } = e.target
-
-  setFormValues({...formValues, [name]: value})
+  
+  setFormValues({...formValues, [e.target.name]: e.target.value})
 }
 
 // const onSubmit = e => {
