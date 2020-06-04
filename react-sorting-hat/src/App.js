@@ -5,6 +5,7 @@ import Gryffindor from './components/Gryffindor'
 import Hufflepuff from './components/Hufflepuff'
 import Ravenclaw from './components/Ravenclaw'
 import Slytherin from './components/Slytherin'
+import * as yup from 'yup'
 
 import './App.css';
 
@@ -18,41 +19,57 @@ const initialFormValues={
   elements: ''
 }
 
+const initialDisabled = true
 
 
 function App() {
 
+// States````````````
 const [formValues, setFormValues] = useState(initialFormValues)
+const [disabled, setDisabled] = useState(initialDisabled)
 
 // Helpers``````````
+const formSchema = yup.object().shape({
+  animals: yup.string().required('You must select your animal'),
+  traits: yup.string().required('You must select your trait'),
+  colors: yup.string().required('You must select your color'),
+  ghoasts: yup.string().required('You must select your ghoast'),
+  moreTraits: yup.string().required('You must select your moreTrait'),
+  elements: yup.string().required('You must select your element')
+})
+
+
 const onInputChange  = e => {
-  
-  setFormValues({...formValues, [e.target.name]: e.target.value})
+
+  const { name } = e.target
+  const { value } = e.target
+
+  yup
+    .reach(formSchema, name)
+    // we can then run validate using the value
+    .validate(value)
+
+  setFormValues({ ...formValues, [name]: value })
 }
 
-// const onSubmit = e => {
-//   e.preventDefault()
 
-//   const newAnswer = {
-//     animals: formValues.animals,
-//     traits:formValues.traits,
-//     colors:formValues.colors,
-//     ghoasts:formValues.ghoasts,
-//     moreTraits:formValues.moreTraits,
-//     elements:formValues.elements
-//   }
-// }
- 
+useEffect(() => {
+  formSchema.isValid(formValues)
+    .then(valid => {
+      setDisabled(!valid)
+    })
+}, [formValues])
 
 
   return (
     <div className="App">
     <h1>Hello Fresh Blood!</h1>
    <Link to='/questions'><button >initiate sorting process</button></Link> 
-    {/* Routes:  */}
+   
+    {/* Routes: `````````````` */}
 <Switch>
 <Route path='/questions'>
-<Questions values={formValues} onInputChange={onInputChange} />
+<Questions values={formValues} onInputChange={onInputChange}  disabled={disabled}/>
 </Route>
 
 <Route path='/gryffindor'>

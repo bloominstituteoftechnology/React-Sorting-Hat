@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-
+// Helper constants to map over later on```````````
 const animals = [
     'lion',
     'badger',
@@ -44,15 +44,12 @@ const elements = [
     'water'
 ]
 
-const Questions = (props) => {
-    const { values, onInputChange } = props
 
-    const [gryffindor, setGryffindor] = useState(0)
-    const [hufflepuff, setHufflepuff] = useState(0)
-    const [ravenclaw, setRavenclaw] = useState(0)
-    const [slytherin, setSlytherin] = useState(0)
+const Questions = (props) => {
+    const { values, onInputChange, disabled } = props
     // debugger
 
+    // Helpers````````````````
     const countPoints = () => {
         const valuesArr = [values.animals, values.traits, values.colors, values.ghoasts, values.moreTraits, values.elements]
         const gryf = ['lion', 'brave', 'daring', 'scarlet and gold', 'Nearly Headless Nick', 'fire']
@@ -94,9 +91,10 @@ const Questions = (props) => {
 
 
     return (
-        // <form onSubmit={e => e.preventDefault()}>
-        <form>
+        <form onSubmit={e => e.preventDefault()}>
+        {/* <form>      */}
 
+{/* Radio buttons`````````````````` */}
             <h2> Pick an animal :</h2>
             <div className='questionCard' style={{ display: 'flex', justifyContent: 'space-evenly' }}>
                 {animals.map(animal => {
@@ -108,6 +106,8 @@ const Questions = (props) => {
                                 name='animals'
                                 value={animal}
                                 onChange={onInputChange}
+                                required
+                                control={<radio required={true} />}
                             />
                         </label>
                     )
@@ -201,9 +201,8 @@ const Questions = (props) => {
 
             </div>
 
-            {/* <Link to={`/${values.elements === 'fire' && 'results'}`}> */}
             <Link to={`${countPoints()}`}>
-                <button onClick={() => countPoints()}>Submit</button>
+                <button disabled={disabled}>Submit</button>
             </Link>
 
         </form>
